@@ -11,7 +11,7 @@ const BLOG = {
     homeBannerImage: './ny2022.jpg', // 首图
   },
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
-  notionPageId: process.env.NOTION_PAGE_ID || '163c9b3e12cc479495e63e3ef4164966', // Important page_id！！！
+  notionPageId: process.env.NOTION_PAGE_ID || '', // Important page_id！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
   appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'font-sans tracking-wider subpixel-antialiased', // 文章字体 ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
