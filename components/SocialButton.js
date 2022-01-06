@@ -1,5 +1,5 @@
 import BLOG from '@/blog.config'
-import { faGithub, faTelegram, faTwitter, faWeibo } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
