@@ -13,12 +13,12 @@ const BlogPostCard = ({ post, tags }) => {
 
       <div className='p-8 flex flex-col justify-between w-full'>
         <Link href={`${BLOG.path}/article/${post.slug}`} passHref>
-          <a className='cursor-pointer text-2xl xl:text-2xl font-semibold leading-tight text-black font-Maitree dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400'>
+          <a className='cursor-pointer text-xl xl:text-2xl leading-tight text-black dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400'>
             {post.title}
           </a>
         </Link>
 
-        <p className='my-8 text-md text-gray-700 dark:text-gray-300 font-normal leading-7 font-IBM'>{post.summary}</p>
+        <p className='my-8 text-gray-700 dark:text-gray-300 text-md font-light leading-7'>{post.summary}</p>
 
         <div className='flex items-center justify-between flex-wrap dark:text-gray-500 text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 '>
           <div>

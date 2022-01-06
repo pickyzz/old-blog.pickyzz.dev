@@ -1,13 +1,13 @@
 import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
-// import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import Typed from 'typed.js'
 
 let wrapperTop = 0
 let windowTop = 0
-let autoScroll = true
+let autoScroll = false
 
 /**
  *
@@ -19,7 +19,7 @@ export default function Header () {
     if (!typed && window && document.getElementById('typed')) {
       changeType(
         new Typed('#typed', {
-          strings: BLOG.headerStrings,
+          strings: BLOG.home.homeBannerStrings,
           typeSpeed: 200,
           backSpeed: 100,
           backDelay: 400,
@@ -64,11 +64,11 @@ export default function Header () {
 
   const updateTopNav = () => {
     if (theme !== 'dark') {
-      // const stickyNavElement = document.getElementById('sticky-nav')
+      const stickyNavElement = document.getElementById('sticky-nav')
       if (window.scrollY < window.innerHeight) {
-        // stickyNavElement.classList.add('dark')
+        stickyNavElement.classList.add('dark')
       } else {
-        // stickyNavElement.classList.remove('dark')
+        stickyNavElement.classList.remove('dark')
       }
     }
   }
@@ -95,14 +95,14 @@ export default function Header () {
 
   return (
     <header
-      // id="header"
-      // className="duration-500 md:bg-fixed w-full bg-cover bg-center lg:-mt-14 h-screen bg-black"
-      // style={{
-      //   backgroundImage:
-      //     `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${BLOG.bannerImage}")`
-      // }}
+      id="header"
+      className="duration-500 md:bg-fixed w-full bg-cover bg-center h-screen bg-black"
+      style={{
+        backgroundImage:
+          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${BLOG.home.homeBannerImage}")`
+      }}
     >
-      {/* <div className="absolute flex h-full items-center lg:-mt-14 justify-center w-full text-4xl md:text-7xl text-white">
+      <div className="absolute flex h-full items-center lg:-mt-14 justify-center w-full text-4xl md:text-7xl text-white">
         <div id='typed' className='flex text-center font-serif'/>
       </div>
       <div
@@ -112,7 +112,7 @@ export default function Header () {
         className="cursor-pointer w-full text-center py-4 text-5xl absolute bottom-10 text-white"
       >
         <FontAwesomeIcon icon={faAngleDown} className='animate-bounce'/>
-      </div> */}
+      </div>
     </header>
   )
 }

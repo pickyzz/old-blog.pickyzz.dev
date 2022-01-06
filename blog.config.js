@@ -1,11 +1,15 @@
 const BLOG = {
   title: 'Pickyzz',
   author: 'Pickyzz T.',
+  bio: 'Just learning to code',
   email: 'pikcolokung@gmail.com',
   link: 'https://pickyzz.dev',
   description: 'Just a man whom learing to code',
-  headerStrings: ['Happy new year 2022', 'ขอให้มีความสุขตลอดปี'], // 首页文字
-  bannerImage: './ny2022.jpg', // 首图
+  home: {
+    showHomeBanner: false, // 首页是否显示大图及标语 [true,false]
+    homeBannerStrings: ['Happy new year 2022', 'ขอให้มีความสุขตลอดปี'], // 首页文字
+    homeBannerImage: './ny2022.jpg', // 首图
+  },
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
   notionPageId: process.env.NOTION_PAGE_ID || '163c9b3e12cc479495e63e3ef4164966', // Important page_id！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
@@ -15,7 +19,8 @@ const BLOG = {
   darkBackground: '#111827', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy in a folder
   since: 2020, // if leave this empty, current year will be used.
-  postsPerPage: 6, // post counts per page
+  postListStyle: 'scroll', // ['page','scroll]
+  postsPerPage: 7, // post counts per page
   sortByDate: true,
   showAbout: true, // WIP 是否显示关于
   showArchive: true, // WIP 是否显示归档
@@ -38,6 +43,11 @@ const BLOG = {
     baiduAnalytics: '', // e.g only need xxxxx -> https://hm.baidu.com/hm.js?[xxxxx]
     busuanzi: false, // see http://busuanzi.ibruce.info/
     cnzzAnalytics: '' // 站长统计id only need xxxxxxxx -> https://s9.cnzz.com/z_stat.php?id=[xxxxxxxx]&web_id=[xxxxxxx]
+  },
+  socialLink: {
+    twitter: 'https://twitter.com/p1ckyzz',
+    github: 'https://github.com/pickyzz',
+    telegram: 'https://t.me/pickyzz'
   },
   comment: {
     // support provider: gitalk, utterances, cusdis, giscus

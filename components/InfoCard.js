@@ -2,6 +2,7 @@ import BLOG from '@/blog.config'
 import Image from 'next/image'
 import Router from 'next/router'
 import React from 'react'
+import SocialButton from './SocialButton'
 
 const InfoCard = ({ postCount }) => {
   return <>
@@ -16,7 +17,9 @@ const InfoCard = ({ postCount }) => {
           className='rounded-lg'
         />
         </div>
-        <div className='text-2xl font-mono dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.author}</div>
+        <div className='text-2xl font-serif dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.author}</div>
+        <div className='font-light dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.bio}</div>
+        <SocialButton/>
     </div>
   </>
 }

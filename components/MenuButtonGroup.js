@@ -13,7 +13,7 @@ const MenuButtonGroup = ({ allowCollapse = false }) => {
     { id: 0, icon: faHome, name: locale.NAV.INDEX, to: '/' || '/', show: true },
     { id: 1, icon: faInfoCircle, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
     { id: 2, icon: faArchive, name: locale.NAV.ARCHIVE, to: '/archive', show: BLOG.showArchive },
-    { id: 3, icon: faRss, name: locale.NAV.RSS, to: '/feed', show: true }
+    // { id: 3, icon: faRss, name: locale.NAV.RSS, to: '/feed', show: true }
     // { id: 7, icon: 'faGithub', name: 'Github', to: 'https://github.com/tangly1024', show: true },
     // { id: 5, icon: 'faWeibo', name: '微博', to: 'https://weibo.com/tangly1024', show: true },
     // { id: 4, icon: 'faEnvelope', name: locale.NAV.MAIL, to: 'mailto:tlyong1992@hotmail.com', show: true }

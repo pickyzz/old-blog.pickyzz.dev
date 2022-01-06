@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import throttle from 'lodash.throttle'
 import { uuidToId } from 'notion-utils'
 import Progress from './Progress'
@@ -26,7 +26,7 @@ const Toc = ({ toc, targetRef }) => {
   // 同步选中目录事件
   const [activeSection, setActiveSection] = React.useState(null)
   const throttleMs = 100
-  const actionSectionScrollSpy = useCallback(throttle(() => {
+  const actionSectionScrollSpy = React.useCallback(throttle(() => {
     const sections = document.getElementsByClassName('notion-h')
     let prevBBox = null
     let currentSectionId = activeSection
@@ -66,14 +66,14 @@ const Toc = ({ toc, targetRef }) => {
             notion-table-of-contents-item-indent-level-${tocItem.indentLevel} 
             ${activeSection === id && ' font-bold text-gray-600 dark:text-gray-300'}`}
           >
-                      <span
-                        style={{
-                          display: 'inline-block',
-                          marginLeft: tocItem.indentLevel * 16
-                        }}
-                      >
-                        {tocItem.text}
-                      </span>
+            <span
+              style={{
+                display: 'inline-block',
+                marginLeft: tocItem.indentLevel * 16
+              }}
+            >
+              {tocItem.text}
+            </span>
           </a>
         )
       })}
