@@ -14,7 +14,7 @@ import { useGlobal } from '@/lib/global'
  * @returns {JSX.Element}
  * @constructor
  */
- const BlogPostListScroll = ({ posts = [], currentSearch, currentCategory, currentTag }) => {
+const BlogPostListScroll = ({ posts = [], currentSearch, currentCategory, currentTag }) => {
   const postsPerPage = BLOG.postsPerPage
   const [page, updatePage] = useState(1)
   const postsToShow = getPostByPage(page, posts, postsPerPage)
