@@ -13,11 +13,11 @@ const InfoCard = ({ postCount }) => {
           width={128}
           height={128}
           loading='lazy'
-          src='/avatar.png'
+          src='/avatar.jpg'
           className='rounded-lg'
         />
         </div>
-        <div className='text-2xl font-serif dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.author}</div>
+        <div className='text-2xl font-mono dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.author}</div>
         <div className='font-light dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.bio}</div>
         <SocialButton/>
     </div>

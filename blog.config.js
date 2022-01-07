@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'Pickyzz',
-  author: 'Pickyzz T.',
+  author: 'Parinya T.',
   bio: 'Just learning to code',
   email: 'pikcolokung@gmail.com',
   link: 'https://pickyzz.dev',
