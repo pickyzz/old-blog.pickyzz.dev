@@ -14,9 +14,10 @@ export default function FloatDarkModeButton () {
     }
   }
   useEffect(() => {
+    scrollListener()
     document.addEventListener('scroll', scrollListener)
     return () => document.removeEventListener('scroll', scrollListener)
-  })
+  }, [show])
 
   const { changeTheme } = useGlobal()
   const userTheme = loadUserThemeFromCookies()
@@ -34,9 +35,9 @@ export default function FloatDarkModeButton () {
     <div
       onClick={handleChangeDarkMode}
       className={
-        (show ? '' : 'hidden lg:block') +
-        ' animate__fadeInRight  px-3.5 py-3 animate__animated animate__faster shadow-card fixed right-3 bottom-24 z-10 duration-200 text-xs cursor-pointer rounded-xl' +
-        ' text-black shadow-card dark:border-gray-500 glassmorphism dark:bg-gray-700 dark:text-gray-200'
+        (show ? '' : ' hidden ') +
+        ' animate__fadeInRight  px-3.5 py-3 animate__animated animate__faster shadow-card fixed right-2 bottom-24 z-10 duration-200 text-xs cursor-pointer rounded-xl' +
+        ' text-black dark:border-gray-500 flex justify-center items-center w-9 h-9 glassmorphism dark:bg-gray-700 dark:text-gray-200'
       }
     >
       <FontAwesomeIcon
