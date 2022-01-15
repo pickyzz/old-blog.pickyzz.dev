@@ -40,7 +40,7 @@ const JumpToBottomButton = ({ targetRef, showPercent = false }) => {
       <div onClick={() => window.scrollTo({ top: targetRef.current.clientHeight, behavior: 'smooth' })}
         className={(show ? '' : 'hidden') + ' animate__fadeInRight animate__animated animate__faster shadow-card rounded-xl glassmorphism flex justify-center items-center w-9 h-9 cursor-pointer '}>
         <div className='text-center'>
-        <div className='dark:text-gray-200 transform hover:scale-150 duration-200 text-xs' title={locale.POST.TOP} >
+        <div className='dark:text-gray-200 transform hover:scale-150 duration-200 text-xs' title={locale.POST.BOT} >
           <FontAwesomeIcon icon={faArrowDown} />
         </div>
           {showPercent && (<div className='w-10 text-xs dark:text-gray-200'>{percent}</div>)}

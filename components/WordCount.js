@@ -12,7 +12,7 @@ export default function WordCount () {
   })
 
   return <div id='wordCountWrapper' className='hidden'>
-   <FontAwesomeIcon icon={faFileWord} className='mr-1'/> Words count <strong id='wordCount'>0</strong> &nbsp;|&nbsp; <FontAwesomeIcon className='mr-1' icon={faClock}/> Read time ≈ <strong id='readTime'>0</strong> Minute(s)
+   <FontAwesomeIcon icon={faFileWord} className='mr-1'/> Words ≈ <strong id='wordCount'>0</strong> &nbsp;|&nbsp; <FontAwesomeIcon className='mr-1' icon={faClock}/> Read time ≈ <strong id='readTime'>0</strong> Min
     </div>
 }
 
