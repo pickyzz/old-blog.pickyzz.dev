@@ -2,6 +2,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import BLOG from '@/blog.config'
 import ThirdPartyScript from '@/components/ThirdPartyScript'
+import {loadUserThemeFromCookies} from '@/lib/theme'
 
 class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -11,7 +12,7 @@ class MyDocument extends Document {
 
   render () {
     return (
-      <Html lang={BLOG.lang}>
+      <Html lang={BLOG.lang} class={loadUserThemeFromCookies() ?? BLOG.appearance} >
         <Head>
           <link rel='icon' href='/favicon.svg' />
           <link rel='icon' href='/favicon.svg' type='image/svg+xml' />

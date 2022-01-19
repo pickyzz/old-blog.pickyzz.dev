@@ -1,6 +1,6 @@
 import BLOG from '@/blog.config'
 import { useEffect } from 'react'
-import { useGlobal } from '@/lib/global'
+// import { useGlobal } from '@/lib/global'
 
 /**
  * ระบบคอมเม้น
@@ -10,7 +10,7 @@ import { useGlobal } from '@/lib/global'
  * @constructor
  */
 const Giscus = ({ pathname, layout }) => {
-  const { theme } = useGlobal()
+  // const { theme } = useGlobal()
   useEffect(() => {
     const script = document.createElement('script')
     const anchor = document.getElementById('comments')
@@ -22,7 +22,7 @@ const Giscus = ({ pathname, layout }) => {
     script.setAttribute('data-mapping', pathname)
     script.setAttribute('data-reactions-enabled', 1)
     script.setAttribute('data-emit-metadata', 0)
-    script.setAttribute('data-theme', theme)
+    script.setAttribute('data-theme', 'light')
     script.setAttribute('data-lang', 'en')
     script.setAttribute('crossorigin', 'anonymous')
     script.setAttribute('async', true)

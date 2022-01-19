@@ -37,7 +37,7 @@ const JumpToTopButton = ({ targetRef, showPercent = false }) => {
     return () => document.removeEventListener('scroll', scrollListener)
   }, [show])
 
-  return (<div id='jump-to-top' className='right-2 fixed flex bottom-48 z-20'>
+  return (<div id='jump-to-top' className='right-2 fixed flex bottom-24 z-20'>
       <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={(show ? '' : 'hidden') + ' animate__fadeInRight animate__animated animate__faster shadow-card rounded-xl glassmorphism flex justify-center items-center w-9 h-9 cursor-pointer '}>
         <div className='text-center'>

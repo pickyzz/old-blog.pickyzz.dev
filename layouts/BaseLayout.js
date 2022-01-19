@@ -1,5 +1,5 @@
 import CommonHead from '@/components/CommonHead'
-import FloatDarkModeButton from '@/components/FloatDarkModeButton'
+// import FloatDarkModeButton from '@/components/FloatDarkModeButton'
 import Footer from '@/components/Footer'
 import JumpToBottomButton from '@/components/JumpToBottomButton'
 import JumpToTopButton from '@/components/JumpToTopButton'
@@ -72,8 +72,8 @@ const BaseLayout = ({
 
       <Footer title={meta.title}/>
       <JumpToTopButton targetRef={targetRef} showPercent={false} />
-      <JumpToBottomButton targetRef={targetRef} showPercent={false}/>
-      <FloatDarkModeButton/>
+      {/* <JumpToBottomButton targetRef={targetRef} showPercent={false}/> */}
+      {/* <FloatDarkModeButton/> */}
       </>
   )
 }
