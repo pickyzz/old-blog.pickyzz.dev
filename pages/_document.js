@@ -12,7 +12,7 @@ class MyDocument extends Document {
 
   render () {
     return (
-      <Html lang={BLOG.lang} class={loadUserThemeFromCookies() ?? BLOG.appearance} >
+      <Html lang={BLOG.lang} className={loadUserThemeFromCookies() ?? BLOG.appearance} >
         <Head>
           <link rel='icon' href='/favicon.svg' />
           <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
