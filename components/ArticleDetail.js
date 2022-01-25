@@ -19,7 +19,7 @@ import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-typescript'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Code, Collection, CollectionRow, Equation, NotionRenderer } from 'react-notion-x'
 import ArticleCopyright from './ArticleCopyright'
 import WordCount from './WordCount'
@@ -42,15 +42,20 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
     margin: getMediumZoomMargin()
   })
   const zoomRef = useRef(zoom ? zoom.clone() : null)
-  function attachZoom (image) {
-    if (zoomRef.current) {
-      (zoomRef.current).attach(image)
+
+  useEffect(() => {
+    // Add all images under all containers to medium-zoom
+    const container = document.getElementById('container')
+    const imgList = container.getElementsByTagName('img')
+    if (imgList && zoomRef.current) {
+      for (let i = 0; i < imgList.length; i++) {
+        (zoomRef.current).attach(imgList[i])
+      }
     }
-  }
-  const attachZoomRef = attachZoom
+  })
 
   return (<>
-      <div id="article-wrapper" ref={targetRef} className="overflow-x-auto flex-grow max-w-5xl mx-auto w-screen md:w-full ">
+      <div id="container" ref={targetRef} className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
           <article itemScope itemType="https://schema.org/Movie"
             className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-24 md:px-24 xl:px-32 dark:border-gray-700 bg-white dark:bg-gray-800"
           >
@@ -59,7 +64,7 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
                 {post.type && !post.type.includes('Page') && post?.page_cover && (
                   <div className="w-full relative md:flex-shrink-0 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img alt={post.title} ref={attachZoomRef}src={post?.page_cover} className='object-center' />
+                    <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
                   </div>
                 )}
 
