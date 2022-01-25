@@ -73,43 +73,43 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
                   {post.title}
                 </div>
 
-                <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
-                  <div>
-                    <Link href={`/category/${post.category}`} passHref>
-                      <a className="cursor-pointer text-md mr-2 hover:text-black dark:hover:text-white border-b dark:border-gray-500 border-dashed">
-                        <FontAwesomeIcon icon={faFolderOpen} className="mr-1" />
-                        {post.category}
-                      </a>
-                    </Link>
-                    <span className='mr-2'>|</span>
-
-                    {post.type[0] !== 'Page' && (<>
-                      <Link
-                        href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
-                        passHref
-                      >
-                        <a className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
-                          {date}
+                {post.type && !post.type.includes('Page') && (
+                  <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
+                    <div>
+                      <Link href={`/category/${post.category}`} passHref>
+                        <a className="cursor-pointer text-md mr-2 hover:text-black dark:hover:text-white border-b dark:border-gray-500 border-dashed">
+                          <FontAwesomeIcon icon={faFolderOpen} className="mr-1" />
+                          {post.category}
                         </a>
                       </Link>
                       <span className='mr-2'>|</span>
-                    </>)}
 
-                    <div className="hidden busuanzi_container_page_pv font-light mr-2">
-                      <FontAwesomeIcon icon={faEye} className='mr-1'/>
-                      &nbsp;
-                      <span className="mr-2 busuanzi_value_page_pv"
-                      ></span>
-                      <span className='mr-2'>|</span>
+                      {post.type[0] !== 'Page' && (<>
+                        <Link
+                          href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
+                          passHref
+                        >
+                          <a className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
+                            {date}
+                          </a>
+                        </Link>
+                        <span className='mr-2'>|</span>
+                      </>)}
+
+                      <div className="hidden busuanzi_container_page_pv font-light mr-2">
+                        <FontAwesomeIcon icon={faEye} className='mr-1'/>
+                        &nbsp;
+                        <span className="mr-2 busuanzi_value_page_pv"
+                        ></span>
+                        <span className='mr-2'>|</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className='flex flex-nowrap whitespace-nowrap items-center font-light text-md'>
-                    <WordCount/>
-                   </div>
+                    <div className='flex flex-nowrap whitespace-nowrap items-center font-light text-md'>
+                      <WordCount/>
+                    </div>
 
-                </section>
-
-                {/* <hr className="mt-2" /> */}
+                  </section>
+                )}
 
             </header>
 
@@ -149,7 +149,7 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
 
             {/* 标签列表 */}
             <section className="md:flex md:justify-between">
-              {post.tagItems && (
+              {post.tagItems && !post.type.includes('Page') && (
                 <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
                   <div className="hidden md:block dark:text-gray-300 whitespace-nowrap">
                     {locale.COMMON.TAGS}：
@@ -169,9 +169,11 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
           </article>
 
           {/* 评论互动 */}
-          <div className="mt-5 lg:px-40 md:hover:shadow-2xl duration-200 shadow w-screen md:w-full overflow-x-auto dark:border-gray-700 bg-white dark:bg-gray-700">
-            <Comment frontMatter={post} />
-          </div>
+          {post.type && !post.type.includes('Page') && (
+            <div className="mt-5 lg:px-40 md:hover:shadow-2xl duration-200 shadow w-screen md:w-full overflow-x-auto dark:border-gray-700 bg-white dark:bg-gray-700">
+              <Comment frontMatter={post} />
+            </div>
+          )}
       </div>
 
       {/* 悬浮目录按钮 */}
