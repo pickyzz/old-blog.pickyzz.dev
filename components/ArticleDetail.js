@@ -115,7 +115,7 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
 
               {post.type && !post.type.includes('Page') && post?.page_cover && (
                 // <div className="w-full relative md:flex-shrink-0 overflow-hidden -mb-6 py-8 px-2">
-                <div className="box-border h-full w-full relative md:flex-shrink-0 overflow-hidden -mb-6 py-6 px-2">
+                <div className="box-border h-full w-full relative md:flex-shrink-0 overflow-hidden py-6 px-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
                 </div>
