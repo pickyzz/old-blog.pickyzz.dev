@@ -61,55 +61,65 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
           >
 
             <header className='animate__slideInDown animate__animated'>
-              {/* 文章Title */}
-              <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-10">
-                  {post.title}
-                </div>
 
-                {post.type && !post.type.includes('Page') && (
-                  <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
-                    <div>
-                      <Link href={`/category/${post.category}`} passHref>
-                        <a className="cursor-pointer text-md mr-2 hover:text-black dark:hover:text-white border-b dark:border-gray-500 border-dashed">
-                          <FontAwesomeIcon icon={faFolderOpen} className="mr-1" />
-                          {post.category}
+              {post.type[0] === 'Post' && (<>
+                {/* 文章Title */}
+                <div className="font-bold text-center text-3xl text-black dark:text-white font-Maitree pt-6">
+                    {post.title}
+                </div>
+              </>)}
+
+              {post.type[0] === 'Page' && (<>
+                <div className="font-bold px-2 text-3xl text-black dark:text-white font-Maitree pt-6">
+                  { post.title}
+                </div>
+              </>)}
+
+              {post.type && !post.type.includes('Page') && (
+                <section className="flex-wrap flex justify-center mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
+                  <div>
+                    <Link href={`/category/${post.category}`} passHref>
+                      <a className="cursor-pointer text-md mr-2 hover:text-black dark:hover:text-white border-b dark:border-gray-500 border-dashed">
+                        <FontAwesomeIcon icon={faFolderOpen} className="mr-1" />
+                        {post.category}
+                      </a>
+                    </Link>
+                    <span className='mr-2'>|</span>
+
+                    {post.type[0] !== 'Page' && (<>
+                      <Link
+                        href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
+                        passHref
+                      >
+                        <a className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
+                          {date}
                         </a>
                       </Link>
                       <span className='mr-2'>|</span>
+                    </>)}
 
-                      {post.type[0] !== 'Page' && (<>
-                        <Link
-                          href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
-                          passHref
-                        >
-                          <a className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
-                            {date}
-                          </a>
-                        </Link>
-                        <span className='mr-2'>|</span>
-                      </>)}
-
-                      <div className="hidden busuanzi_container_page_pv font-light mr-2">
-                        <FontAwesomeIcon icon={faEye} className='mr-1'/>
-                        &nbsp;
-                        <span className="mr-2 busuanzi_value_page_pv"
-                        ></span>
-                        <span className='mr-2'>|</span>
-                      </div>
+                    <div className="hidden busuanzi_container_page_pv font-light mr-2">
+                      <FontAwesomeIcon icon={faEye} className='mr-1'/>
+                      &nbsp;
+                      <span className="mr-2 busuanzi_value_page_pv"
+                      ></span>
+                      <span className='mr-2'>|</span>
                     </div>
-                    <div className='flex flex-nowrap whitespace-nowrap items-center font-light text-md'>
-                      <WordCount/>
-                    </div>
-
-                  </section>
-                )}
-
-                {post.type && !post.type.includes('Page') && post?.page_cover && (
-                  <div className="w-full relative md:flex-shrink-0 overflow-hidden py-8">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
                   </div>
-                )}
+                  <div className='flex flex-nowrap whitespace-nowrap items-center font-light text-md'>
+                    <WordCount/>
+                  </div>
+
+                </section>
+              )}
+
+              {post.type && !post.type.includes('Page') && post?.page_cover && (
+                // <div className="w-full relative md:flex-shrink-0 overflow-hidden -mb-6 py-8 px-2">
+                <div className="box-border h-full w-full relative md:flex-shrink-0 overflow-hidden -mb-6 py-6 px-2">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
+                </div>
+              )}
 
             </header>
 
