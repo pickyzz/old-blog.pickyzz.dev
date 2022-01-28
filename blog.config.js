@@ -51,14 +51,14 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis, giscus
-    provider: 'giscus', // leave it empty if you don't need any comment plugin
+    provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [''],
-      clientID: '',
-      clientSecret: '',
-      distractionFreeMode: false
+      repo: 'pickyzz-blog-comment', // The repository of store comments
+      owner: 'pickyzz',
+      admin: ['pickyzz'],
+      clientID: '83ad43f71ac4264b7e49',
+      clientSecret: 'b91ccc31d654e37e0cae28e291148d287e7dc46a',
+      distractionFreeMode: true
     },
     cusdisConfig: {
       appId: '39653082-a845-4340-bb5b-b8546fcf04b4', // data-app-id

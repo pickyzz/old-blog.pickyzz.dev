@@ -1,6 +1,7 @@
 import BLOG from '@/blog.config'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
+import 'gitalk/dist/gitalk.css'
 import { useGlobal } from '@/lib/global'
 
 const GitalkComponent = dynamic(

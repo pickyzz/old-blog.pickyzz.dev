@@ -10,7 +10,7 @@ const Footer = ({ title }) => {
   const from = +BLOG.since
   return (
     <footer
-      className='bg-gray-800 dark:bg-black dark:border-gray-900 border-t flex-shrink-0 justify-center text-center m-auto w-full text-gray-400 text-sm p-6'
+      className='bg-rose-800 dark:bg-black dark:border-gray-900 border-t flex-shrink-0 justify-center text-center m-auto w-full text-gray-400 text-sm p-6'
     >
       <FontAwesomeIcon icon={faCopyright} /> <span> {`${from} - ${y}`} <a href={BLOG.link} className='font-bold text-gray-100'>{BLOG.author}</a> | Powered by <a href='https://notion.so' className='font-bold text-gray-100'>Notion</a>. </span>
       <span className='hidden busuanzi_container_site_pv'>
@@ -19,7 +19,7 @@ const Footer = ({ title }) => {
       <span className='pl-2 hidden busuanzi_container_site_uv'>
         <FontAwesomeIcon icon={faUsers}/> <span className='px-1 busuanzi_value_site_uv'> </span>uv   </span>
         <br/>
-        <h1>{title}</h1>
+        {/* <h1>{title}</h1> */}
     </footer>
   )
 }

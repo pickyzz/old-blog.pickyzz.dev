@@ -45,8 +45,8 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
 
   useEffect(() => {
     // Add all images under all containers to medium-zoom
-    const container = document?.getElementById('container')
-    const imgList = container?.getElementsByTagName('img')
+    const container = document.getElementById('container')
+    const imgList = container.getElementsByTagName('img')
     if (imgList && zoomRef.current) {
       for (let i = 0; i < imgList.length; i++) {
         (zoomRef.current).attach(imgList[i])
