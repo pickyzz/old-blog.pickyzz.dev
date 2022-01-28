@@ -57,19 +57,12 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
   return (<>
       <div id="container" ref={targetRef} className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
           <article itemScope itemType="https://schema.org/Movie"
-            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-24 md:px-24 xl:px-32 dark:border-gray-700 bg-white dark:bg-gray-800"
+            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-8 md:px-24 xl:px-32 dark:border-gray-700 bg-white dark:bg-gray-800"
           >
 
             <header className='animate__slideInDown animate__animated'>
-                {post.type && !post.type.includes('Page') && post?.page_cover && (
-                  <div className="w-full relative md:flex-shrink-0 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
-                  </div>
-                )}
-
-                {/* 文章Title */}
-                <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-10">
+              {/* 文章Title */}
+              <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-10">
                   {post.title}
                 </div>
 
@@ -109,6 +102,13 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
                     </div>
 
                   </section>
+                )}
+
+                {post.type && !post.type.includes('Page') && post?.page_cover && (
+                  <div className="w-full relative md:flex-shrink-0 overflow-hidden py-8">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
+                  </div>
                 )}
 
             </header>
@@ -166,14 +166,13 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
 
             <BlogAround prev={prev} next={next} />
 
+            {/* comment */}
+            {post.type && !post.type.includes('Page') && (
+                <Comment frontMatter={post} />
+            )}
+
           </article>
 
-          {/* 评论互动 */}
-          {post.type && !post.type.includes('Page') && (
-            <div className="mt-5 lg:px-40 md:hover:shadow-2xl duration-200 shadow w-screen md:w-full overflow-x-auto dark:border-gray-700 bg-white dark:bg-gray-700">
-              <Comment frontMatter={post} />
-            </div>
-          )}
       </div>
 
       {/* 悬浮目录按钮 */}
