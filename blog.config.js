@@ -27,7 +27,7 @@ const BLOG = {
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-pickyzz.vercel.app', // The link to generate OG image, don't end with a slash
   seo: {
-    keywords: ['Notion'],
+    keywords: ['Notion', 'pickyzz', 'blog'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   analytics: {
