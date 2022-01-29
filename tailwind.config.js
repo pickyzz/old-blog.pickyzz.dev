@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         Maitree: ['Maitree'],
-        IBM:['IBM Plex Sans Thai Looped']
+        IBM:['IBM Plex Sans Thai Looped'],
+        Firacode:['Fira Code', 'monospace']
       },
       colors: {
         day: {

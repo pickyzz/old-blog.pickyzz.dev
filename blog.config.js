@@ -6,9 +6,9 @@ const BLOG = {
   link: 'https://pickyzz.dev',
   description: 'Just a man whom learing to code',
   home: {
-    showHomeBanner: false, // 首页是否显示大图及标语 [true,false]
-    homeBannerStrings: ['Happy new year 2022', 'ขอให้มีความสุขตลอดปี'], // 首页文字
-    homeBannerImage: './ny2022.jpg', // 首图
+    showHomeBanner: true, // index's banner [true,false]
+    homeBannerStrings: ['Type less think more'], // 首页文字
+    homeBannerImage: './bg_image.jpg', // 首图
   },
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
   notionPageId: process.env.NOTION_PAGE_ID || '', // Important page_id！！！

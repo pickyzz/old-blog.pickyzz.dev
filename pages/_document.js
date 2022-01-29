@@ -18,6 +18,7 @@ class MyDocument extends Document {
           <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Maitree&display=swap' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap' />
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Fira+Code&display=swap' />
           <ThirdPartyScript />
         </Head>
 
