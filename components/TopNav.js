@@ -11,7 +11,7 @@ import throttle from 'lodash.throttle'
 let windowTop = 0
 
 /**
- * 顶部导航
+ * top navigation
  * @param {*} param0
  * @returns
  */
@@ -32,7 +32,7 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
     }
   }, 200))
 
-  // 监听滚动
+  // monitor scroll
   useEffect(() => {
     if (autoHide) {
       scrollTrigger()
@@ -45,13 +45,13 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
 
   return (
     <div id='top-nav'>
-      {/* 侧面抽屉 */}
+      {/* side drawer */}
       <SideBarDrawer post={post} currentTag={currentTag} cRef={drawer} tags={tags} posts={posts} categories={categories} currentCategory={currentCategory}/>
 
-      {/* 导航栏 */}
+      {/* Navigation Bar */}
       <div id='sticky-nav' className='flex animate__animated animate__fadeIn fixed lg:relative w-full top-0 z-20 transform duration-300'>
         <div className='w-full flex justify-between items-center p-4 glassmorphism'>
-          {/* 左侧LOGO 标题 */}
+          {/* Left LOGO title */}
           <div className='flex flex-none flex-grow-0'>
             <div onClick={() => { drawer.current.handleSwitchSideDrawerVisible() }}
                 className='w-8 cursor-pointer dark:text-gray-300 block lg:hidden'>
