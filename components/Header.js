@@ -102,7 +102,7 @@ export default function Header () {
           `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${BLOG.home.homeBannerImage}")`
       }}
     >
-      <div className="absolute flex h-80 items-center lg:-mt-10 justify-center w-full text-4xl md:text-6xl text-white">
+      <div className="absolute flex h-80 items-center lg:-mt-10 justify-center w-full text-3xl md:text-5xl text-white">
         <div id='typed' className='flex text-center font-Firacode'/>
       </div>
 
