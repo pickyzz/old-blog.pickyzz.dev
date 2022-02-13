@@ -13,7 +13,7 @@ const InfoCard = ({ postCount }) => {
           width={128}
           height={128}
           loading='lazy'
-          src='/avatar.jpg'
+          src='/avatar.png'
           className='rounded-lg'
         />
         </div>

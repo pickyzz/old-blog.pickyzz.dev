@@ -16,7 +16,8 @@ import Typed from 'typed.js'
 export default function Header () {
   const [typed, changeType] = useState()
   useEffect(() => {
-    if (!typed && window && document.getElementById('typed')) {
+    // if (!typed && window && document.getElementById('typed')) {
+    if (!typed && document.getElementById('typed')) {
       changeType(
         new Typed('#typed', {
           strings: BLOG.home.homeBannerStrings,
@@ -24,7 +25,13 @@ export default function Header () {
           backSpeed: 100,
           backDelay: 400,
           showCursor: true,
-          smartBackspace: true
+          smartBackspace: true,
+          shuffle: true,
+          fadeOut: true,
+          fadeOutDelay: 500,
+          loop: false,
+          loopCount: Infinity,
+          cursorChar: '|'
         })
       )
     }

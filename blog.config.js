@@ -10,6 +10,7 @@ const BLOG = {
     homeBannerStrings: ['Type less think more'], // 首页文字
     homeBannerImage: './bg_image.jpg', // 首图
   },
+  avatar: './avatar.png',
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
   notionPageId: process.env.NOTION_PAGE_ID || '', // Important page_id！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
@@ -19,8 +20,8 @@ const BLOG = {
   darkBackground: '#111827', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy in a folder
   since: 2020, // if leave this empty, current year will be used.
-  postListStyle: 'scroll', // ['page','scroll]
-  postsPerPage: 7, // post counts per page
+  postListStyle: 'page', // ['page','scroll]
+  postsPerPage: 10, // post counts per page
   sortByDate: true,
   showAbout: true, // WIP 是否显示关于
   showArchive: true, // WIP 是否显示归档
