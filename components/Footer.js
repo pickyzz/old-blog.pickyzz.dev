@@ -12,7 +12,7 @@ const Footer = ({ title }) => {
     <footer
       className='bg-rose-800 dark:bg-black dark:border-gray-900 border-t flex-shrink-0 justify-center text-center m-auto w-full text-gray-400 text-sm p-6'
     >
-      <FontAwesomeIcon icon={faCopyright} /> <span> {`${from} - ${y}`} | <a href={BLOG.link} className='font-bold text-gray-100'>{BLOG.author}</a> | Powered by <a href='https://notion.so' className='font-bold text-gray-100'>❤</a></span>
+      <FontAwesomeIcon icon={faCopyright} /> <span> {`${from} - ${y}`} | <a href={BLOG.link} className='font-bold text-gray-100'>{BLOG.author}</a> | Powered by <a target='_blank' href='https://notion.so' className='font-bold text-gray-100'>❤</a></span>
       <span className='hidden busuanzi_container_site_pv'>
             <FontAwesomeIcon icon={faEye}/><span className='px-1 busuanzi_value_site_pv'> </span>pv
       </span>

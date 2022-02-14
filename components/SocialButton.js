@@ -1,5 +1,5 @@
 import BLOG from '@/blog.config'
-import { faGithub, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTelegram, faTwitter, faTwitch } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
@@ -20,6 +20,9 @@ const SocialButton = () => {
       </a>}
       {BLOG.socialLink.telegram && <a target='_blank' rel='noreferrer' href={BLOG.socialLink.telegram} title={'telegram'} >
         <FontAwesomeIcon icon={faTelegram} className='transform hover:scale-125 duration-150'/>
+      </a>}
+      {BLOG.socialLink.twitch && <a target='_blank' rel='noreferrer' title={'Twitch'} href={BLOG.socialLink.twitch} >
+        <FontAwesomeIcon icon={faTwitch} className='transform hover:scale-125 duration-150'/>
       </a>}
       {BLOG.email && <a target='_blank' rel='noreferrer' title={'email'} href={`mailto:${BLOG.email}`} >
         <FontAwesomeIcon icon={faEnvelope} className='transform hover:scale-125 duration-150'/>

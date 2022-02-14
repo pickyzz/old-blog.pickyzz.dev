@@ -48,7 +48,8 @@ const BLOG = {
   socialLink: {
     twitter: 'https://twitter.com/p1ckyzz',
     github: 'https://github.com/pickyzz',
-    telegram: 'https://t.me/pickyzz'
+    telegram: 'https://t.me/pickyzz',
+    twitch: 'https://twitch.tv/pickyzz',
   },
   comment: {
     // support provider: gitalk, utterances, cusdis, giscus
