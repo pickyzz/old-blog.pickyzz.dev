@@ -32,11 +32,11 @@ const BLOG = {
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   analytics: {
-    provider: 'ga', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
+    provider: 'ackee', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
     ackeeConfig: {
-      tracker: '', // e.g 'https://ackee.tangly1024.net/tracker.js'
-      dataAckeeServer: '', // e.g https://ackee.tangly1024.net , don't end with a slash
-      domainId: '' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
+      tracker: 'https://pickyzz-ackee.netlify.app/tracker.js', // e.g 'https://ackee.tangly1024.net/tracker.js'
+      dataAckeeServer: 'https://pickyzz-ackee.netlify.app', // e.g https://ackee.tangly1024.net , don't end with a slash
+      domainId: 'f74bd864-b00b-4269-837e-4b6914cd124a' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
     },
     gaConfig: {
       measurementId: 'G-F0LYXZGWQ6' // e.g: G-XXXXXXXXXX
