@@ -26,9 +26,9 @@ const BLOG = {
   showAbout: true, // WIP 是否显示关于
   showArchive: true, // WIP 是否显示归档
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-pickyzz.vercel.app', // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: 'https://og.pickyzz.dev', // The link to generate OG image, don't end with a slash
   seo: {
-    keywords: ['Notion', 'pickyzz', 'blog'],
+    keywords: ['Notion', 'pickyzz', 'blog', 'dev', 'javascript', 'typescript', 'vue', 'react', 'nodejs', 'css', 'html', 'sass', 'less', 'git', 'github', 'gitlab', 'git-lab', 'gitlab.com', 'gitlab.io', 'gitlab.io', 'gitlab.com/pickyzz', 'gitlab.io/pickyzz', 'gitlab.com/pickyzz/blog', 'gitlab.io/pickyzz/blog', 'gitlab.com/pickyzz/blog/', 'gitlab.io/pickyzz/blog/', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   analytics: {
