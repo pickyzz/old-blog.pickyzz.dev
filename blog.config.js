@@ -7,8 +7,8 @@ const BLOG = {
   description: 'Just a man whom learing to code',
   home: {
     showHomeBanner: true, // index's banner [true,false]
-    homeBannerStrings: ['Type less think more'], // 首页文字
-    homeBannerImage: './bg_image.jpg', // 首图
+    homeBannerStrings: ['#StopWar'], // 首页文字 ['Type less think more']
+    homeBannerImage: './4436554.png', // 首图
   },
   avatar: './avatar.png',
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
