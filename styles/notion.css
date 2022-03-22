@@ -1522,7 +1522,7 @@ svg.notion-page-icon {
   transform: scale(1.1);
 
   opacity: 1;
-  transition: opacity 400ms ease-in !important;
+  transition: opacity 400ms ease-in;
   transition-delay: 100ms;
   will-change: opacity;
 }
@@ -1533,13 +1533,13 @@ svg.notion-page-icon {
 
 .lazy-image-real {
   opacity: 0;
-  transition: opacity 400ms ease-out !important;
+  transition: opacity 400ms ease-out;
   will-change: opacity;
 }
 
 .lazy-image-real.medium-zoom-image {
   transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1),
-    opacity 400ms ease-out !important;
+    opacity 400ms ease-out;
   will-change: opacity, transform;
 }
 
@@ -1578,11 +1578,11 @@ svg.notion-page-icon {
   opacity: 1;
 }
 
-/* @keyframes spinner {
+@keyframes spinner {
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 /* NOTION CSS OVERRIDE */
 
