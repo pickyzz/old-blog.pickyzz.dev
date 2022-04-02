@@ -6,12 +6,13 @@ import '@/styles/globals.css'
 import 'react-notion-x/src/styles.css'
 import '@/styles/notion.css' //  重写部分样式
 
-// used for collection views (optional)
-import 'rc-dropdown/assets/index.css'
 // used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/themes/prism-tomorrow.css'
 // used for rendering equations (optional)
-import 'katex/dist/katex.min.css'
+import 'react-notion-x/build/third-party/equation.css'
+// used for tweet embeds (optional)
+import 'react-static-tweets/styles.css'
+
 import dynamic from 'next/dynamic'
 import { GlobalContextProvider } from '@/lib/global'
 import { config } from '@fortawesome/fontawesome-svg-core'
