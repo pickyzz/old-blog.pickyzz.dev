@@ -15,6 +15,7 @@ import Typed from 'typed.js'
  */
 export default function Header () {
   const [typed, changeType] = useState()
+  let url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   useEffect(() => {
     // if (!typed && window && document.getElementById('typed')) {
     if (!typed && document.getElementById('typed')) {
@@ -106,7 +107,7 @@ export default function Header () {
       className="duration-500 md:bg-scroll w-full bg-cover bg-center h-64 bg-black"
       style={{
         backgroundImage:
-          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${BLOG.home.homeBannerImage}")`
+          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${url}${BLOG.home.homeBannerImage}")`
       }}
     >
       <div className="absolute flex h-80 items-center lg:-mt-10 justify-center w-full text-2xl md:text-5xl text-white">
