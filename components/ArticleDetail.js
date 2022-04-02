@@ -34,7 +34,7 @@ export default function ArticleDetail (props) {
   const { post, blockMap, recommendPosts, prev, next } = props
   const drawerRight = useRef(null)
   const targetRef = useRef(null)
-  const url = BLOG.LINK + useRouter().asPath
+  const url = BLOG.link + useRouter().asPath
   const { locale } = useGlobal()
   const date = formatDate(post?.date?.start_date || post.createdTime, locale.LOCALE)
 
