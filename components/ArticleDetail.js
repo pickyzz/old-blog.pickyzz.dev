@@ -15,7 +15,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import 'prismjs'
 import 'prismjs/components/prism-bash'
-import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-c'
+import 'prismjs/components/prism-java'
 import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-typescript'
@@ -29,10 +30,11 @@ import WordCount from './WordCount'
  * @param {*} param0
  * @returns
  */
-export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, next }) {
-  const targetRef = useRef(null)
+export default function ArticleDetail (props) {
+  const { post, blockMap, recommendPosts, prev, next } = props
   const drawerRight = useRef(null)
-  const url = BLOG.link + useRouter().asPath
+  const targetRef = useRef(null)
+  const url = BLOG.LINK + useRouter().asPath
   const { locale } = useGlobal()
   const date = formatDate(post?.date?.start_date || post.createdTime, locale.LOCALE)
 
@@ -47,7 +49,7 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
     // Add all images under all containers to medium-zoom
     const container = document.getElementById('container')
     const imgList = container.getElementsByTagName('img')
-    if (imgList && zoomRef.current) {
+    if (imgList && zoomRef.current && !post?.page_cover) {
       for (let i = 0; i < imgList.length; i++) {
         (zoomRef.current).attach(imgList[i])
       }
@@ -127,7 +129,6 @@ export default function ArticleDetail ({ post, blockMap, recommendPosts, prev, n
             <section id='notion-article' className='px-1'>
               {blockMap && (
                 <NotionRenderer
-                  className={`${BLOG.font}`}
                   recordMap={blockMap}
                   mapPageUrl={mapPageUrl}
                   components={{
