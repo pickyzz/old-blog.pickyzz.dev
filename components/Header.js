@@ -15,7 +15,7 @@ import Typed from 'typed.js'
  */
 export default function Header () {
   const [typed, changeType] = useState()
-  let url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
+  const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   useEffect(() => {
     // if (!typed && window && document.getElementById('typed')) {
     if (!typed && document.getElementById('typed')) {
