@@ -10,8 +10,6 @@ import '@/styles/notion.css' //  重写部分样式
 import 'prismjs/themes/prism-tomorrow.css'
 // used for rendering equations (optional)
 import 'react-notion-x/build/third-party/equation.css'
-// used for tweet embeds (optional)
-import 'react-static-tweets/styles.css'
 
 import dynamic from 'next/dynamic'
 import { GlobalContextProvider } from '@/lib/global'
