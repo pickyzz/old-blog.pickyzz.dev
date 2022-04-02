@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.0.0",
     "@fortawesome/free-solid-svg-icons": "^6.0.0",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@next/bundle-analyzer": "^12.1.4",
     "@popperjs/core": "^2.9.3",
     "animate.css": "^4.1.1",
     "axios": ">=0.21.1",
@@ -41,7 +42,7 @@
     "react-cookies": "^0.1.1",
     "react-cusdis": "^2.0.1",
     "react-dom": "17.0.2",
-    "react-notion-x": "4.13.3",
+    "react-notion-x": "4.19.2",
     "smoothscroll-polyfill": "^0.4.4",
     "typed.js": "^2.0.12",
     "use-ackee": "^3.0.0"
