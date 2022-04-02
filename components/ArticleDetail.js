@@ -49,7 +49,7 @@ export default function ArticleDetail (props) {
     // Add all images under all containers to medium-zoom
     const container = document.getElementById('container')
     const imgList = container.getElementsByTagName('img')
-    if (imgList && zoomRef.current && !post?.page_cover) {
+    if (imgList && zoomRef.current && !post?.page_cover && !post.type.includes('Page')) {
       for (let i = 0; i < imgList.length; i++) {
         (zoomRef.current).attach(imgList[i])
       }
