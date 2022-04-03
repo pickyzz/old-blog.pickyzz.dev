@@ -1,10 +1,12 @@
 import BLOG from '@/blog.config'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 const CommonHead = ({ meta }) => {
   let url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   if (meta) {
-    url = `${url}/${meta.slug}`
+    const router = useRouter()
+    url = `${url}${router.asPath}`
   }
   const title = meta?.title || BLOG.title
   const description = meta?.description || BLOG.description
