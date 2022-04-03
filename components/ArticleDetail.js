@@ -21,7 +21,12 @@ import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-python'
 import 'prismjs/components/prism-typescript'
 import { useEffect, useRef } from 'react'
-import { Code, Collection, CollectionRow, Equation, NotionRenderer } from 'react-notion-x'
+import { NotionRenderer } from 'react-notion-x'
+import { Collection } from 'react-notion-x/build/third-party/collection'
+import { Code } from 'react-notion-x/build/third-party/code'
+import { Equation } from 'react-notion-x/build/third-party/equation'
+import { Pdf } from 'react-notion-x/build/third-party/pdf'
+import { Modal } from 'react-notion-x/build/third-party/modal'
 import ArticleCopyright from './ArticleCopyright'
 import WordCount from './WordCount'
 
@@ -132,10 +137,11 @@ export default function ArticleDetail (props) {
                   recordMap={blockMap}
                   mapPageUrl={mapPageUrl}
                   components={{
-                    equation: Equation,
-                    code: Code,
-                    collectionRow: CollectionRow,
-                    collection: Collection
+                    Code,
+                    Collection,
+                    Equation,
+                    Pdf,
+                    Modal
                   }}
                 />
               )}

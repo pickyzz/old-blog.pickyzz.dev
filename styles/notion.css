@@ -710,7 +710,9 @@ svg.notion-page-icon {
 .notion .notion-code {
   font-size: 85%;
   background: #15141b;
-  border-radius: 15px;
+  border-radius: 10px;
+  overflow-y: hidden;
+  scroll-margin-left: -1px;
 }
 
 .notion-code {
@@ -723,6 +725,34 @@ svg.notion-page-icon {
   overflow: auto;
   font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
+}
+
+/* if want to show copy button just comment display: none; && uncomment other */
+.notion-code .notion-code-copy{
+  /* opacity: 1; */
+  display: none;
+}
+
+.notion-code-copy{
+  width: 100%;
+  position: sticky;
+  align-self: flex-end;
+  text-align: right;
+  left: 0rem;
+  top: 0rem;
+}
+
+.notion-code-copy-button {
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.notion-code-copy-tooltip{
+  width: 100%;
+  position: absolute;
+  align-self: flex-end;
+  text-align: center;
+  margin-bottom: 7%;
 }
 
 .notion-column {
