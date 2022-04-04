@@ -51,7 +51,7 @@ const ShareBar = ({ post }) => {
         </a>
       </div>
       <div className='text-3xl cursor-pointer'>
-        <a className='text-blue-400' target='_blank' rel='noreferrer' href={`https://twitter.com/intent/tweet?title=${post.title}&url=${shareUrl}`} >
+        <a className='text-blue-400' target='_blank' rel='noreferrer' href={`https://twitter.com/intent/tweet?title=${post.title}&url=${shareUrl} via @p1ckyzz`} >
           <FontAwesomeIcon icon={faTwitterSquare}/>
         </a>
       </div>
