@@ -34,7 +34,7 @@
     "localStorage": "^1.0.4",
     "lodash.throttle": "^4.1.1",
     "memory-cache": "^0.2.0",
-    "next": "^12.0.5",
+    "next": "^12.1.4",
     "notion-client": "6.5.0",
     "notion-utils": "6.5.0",
     "preact": "^10.5.15",
@@ -43,11 +43,11 @@
     "react-cookies": "^0.1.1",
     "react-cusdis": "^2.0.1",
     "react-dom": "17.0.2",
-    "react-notion-x": "^6.6.1",
+    "react-notion-x": "6.6.2",
     "sharp": "^0.30.3",
     "smoothscroll-polyfill": "^0.4.4",
     "typed.js": "^2.0.12",
-    "use-ackee": "^3.0.0"
+    "use-ackee": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
