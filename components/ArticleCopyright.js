@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function ArticleCopyright ({ author, url }) {
   const { locale } = useGlobal()
-  return <section className="dark:text-gray-300 mt-6">
+  return <section className="dark:text-gray-300 mt-6 md:px-24 xl:px-32">
     <div className="text-2xl mb-2">{locale.COMMON.COPYRIGHT}</div>
     <ul className="text-sm dark:bg-gray-900 bg-gray-100 p-5 leading-8 border-l-4 border-red-500">
       <li>

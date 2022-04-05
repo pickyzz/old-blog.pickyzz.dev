@@ -33,7 +33,7 @@ const Comment = ({ frontMatter }) => {
   const router = useRouter()
   const { theme } = useGlobal()
 
-  return <div className='comment text-gray-800 dark:text-gray-300'>
+  return <div className='comment text-gray-800 dark:text-gray-300 md:px-20 xl:px-28'>
     {BLOG.comment.provider === 'gitalk' && (<div className='m-10'>
       <GitalkComponent
         options={{

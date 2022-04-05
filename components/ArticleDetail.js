@@ -65,21 +65,20 @@ export default function ArticleDetail (props) {
   return (<>
       <div id="container" ref={targetRef} className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
           <article itemScope itemType="https://schema.org/Movie"
-            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-8 md:px-24 xl:px-32 dark:border-gray-700 bg-white dark:bg-gray-800"
+            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-0 md:px-0 xl:px-0 dark:border-gray-700 bg-white dark:bg-gray-800"
           >
 
-            <header className='animate__slideInDown animate__animated'>
+            {post.type[0] === 'Post' && (<header
+              className='animate__slideInDown h-full w-full md:w-auto overflow-hidden py-10 px-4'
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.4), rgba(0, 0, 0, 0.8) ),url(${post.page_cover || post.cover})`
+              }}
+            >
 
               {post.type[0] === 'Post' && (<>
                 {/* 文章Title */}
-                <div className="font-bold text-center text-3xl text-black dark:text-white font-Maitree pt-6">
+                <div className="font-bold text-center text-3xl text-white dark:text-white font-Maitree pt-6">
                     {post.title}
-                </div>
-              </>)}
-
-              {post.type[0] === 'Page' && (<>
-                <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4">
-                  {post.title}
                 </div>
               </>)}
 
@@ -117,22 +116,18 @@ export default function ArticleDetail (props) {
                   <div className='flex flex-nowrap whitespace-nowrap items-center font-light text-md'>
                     <WordCount/>
                   </div>
-
                 </section>
               )}
+            </header>)}
 
-              {post.type && !post.type.includes('Page') && post?.page_cover && (
-                // <div className="w-full relative md:flex-shrink-0 overflow-hidden -mb-6 py-8 px-2">
-                <div className="box-border h-full w-full relative md:flex-shrink-0 overflow-hidden py-6 px-4">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  {/* <img alt={post.title} src={post?.page_cover} className='object-center w-full' /> */}
-                </div>
-              )}
-
-            </header>
+            {post.type[0] === 'Page' && (<header className='animate__slideInDown h-full w-full md:w-auto'>
+              <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
+                {post.title}
+              </div>
+            </header>)}
 
             {/* Notion文章主体 */}
-            <section id='notion-article' className='px-1'>
+            <section id='notion-article' className='px-1 pt-0 md:px-24 xl:px-36'>
               {blockMap && (
                 <NotionRenderer
                   recordMap={blockMap}
@@ -168,7 +163,7 @@ export default function ArticleDetail (props) {
             <ArticleCopyright author={BLOG.author} url={url} />
 
             {/* 标签列表 */}
-            <section className="md:flex md:justify-between">
+            <section className="md:flex md:justify-between md:px-24 xl:px-32">
               {post.tagItems && !post.type.includes('Page') && (
                 <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
                   <div className="hidden md:block dark:text-gray-300 whitespace-nowrap">

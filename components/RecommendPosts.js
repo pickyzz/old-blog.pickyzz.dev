@@ -12,7 +12,7 @@ const RecommendPosts = ({ recommendPosts }) => {
   const { locale } = useGlobal()
 
   return (
-    <div className="dark:text-gray-300 pt-2">
+    <div className="dark:text-gray-300 pt-2 md:px-24 xl:px-32">
       <div className="mb-2 text-2xl">{locale.COMMON.RELATE_POSTS}</div>
         <ul className="list-disc pl-6 text-sm dark:bg-gray-900 bg-gray-100 p-2 my-2  border-l-4 border-yellow-500">
           {recommendPosts.map(post => (
