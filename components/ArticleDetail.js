@@ -11,6 +11,7 @@ import { useGlobal } from '@/lib/global'
 import { faEye, faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import mediumZoom from 'medium-zoom'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import 'prismjs'
@@ -137,6 +138,8 @@ export default function ArticleDetail (props) {
                   recordMap={blockMap}
                   mapPageUrl={mapPageUrl}
                   components={{
+                    nextImage: Image,
+                    nextLink: Link,
                     Code,
                     Collection,
                     Equation,
