@@ -69,7 +69,7 @@ export default function ArticleDetail (props) {
           >
 
             {post.type[0] === 'Post' && (<header
-              className='animate__slideInDown h-full w-full md:w-auto overflow-hidden py-10 px-4'
+              className='h-full w-full md:w-auto overflow-hidden py-10 px-4 bg-cover bg-center'
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.4), rgba(0, 0, 0, 0.8) ),url(${post.page_cover || post.cover})`
               }}
@@ -120,14 +120,14 @@ export default function ArticleDetail (props) {
               )}
             </header>)}
 
-            {post.type[0] === 'Page' && (<header className='animate__slideInDown h-full w-full md:w-auto'>
+            {post.type[0] === 'Page' && (<header className='h-full w-full md:w-auto'>
               <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
                 {post.title}
               </div>
             </header>)}
 
             {/* Notion文章主体 */}
-            <section id='notion-article' className='px-1 pt-0 md:px-24 xl:px-36'>
+            <section id='notion-article' className='px-1 pt-8 md:px-24 xl:px-36'>
               {blockMap && (
                 <NotionRenderer
                   recordMap={blockMap}
