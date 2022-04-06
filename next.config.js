@@ -15,7 +15,8 @@ module.exports = withBundleAnalyzer({
       'i.imgur.com',
       'pbs.twimg.com',
       'https://og.pickyzz.dev'
-    ]
+    ],
+    formats: ['image/avif', 'image/webp']
   },
   async headers () {
     return [
