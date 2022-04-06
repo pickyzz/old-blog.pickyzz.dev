@@ -29,6 +29,7 @@
     "animate.css": "^4.1.1",
     "axios": ">=0.21.1",
     "copy-to-clipboard": "^3.3.1",
+    "date-fns": "^2.28.0",
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
     "localStorage": "^1.0.4",
@@ -44,8 +45,10 @@
     "react-cusdis": "^2.0.1",
     "react-dom": "17.0.2",
     "react-notion-x": "6.7.1",
+    "react-static-tweets": "^0.7.2",
     "sharp": "^0.30.3",
     "smoothscroll-polyfill": "^0.4.4",
+    "static-tweets": "^0.7.2",
     "typed.js": "^2.0.12",
     "use-ackee": "^3.0.1"
   },

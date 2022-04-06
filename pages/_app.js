@@ -12,6 +12,9 @@ import 'prismjs/themes/prism-tomorrow.css'
 // used for rendering equations (optional)
 import 'react-notion-x/build/third-party/equation.css'
 
+// used for tweet embeds (optional)
+import 'react-static-tweets/styles.css'
+
 import dynamic from 'next/dynamic'
 import { GlobalContextProvider } from '@/lib/global'
 import { config } from '@fortawesome/fontawesome-svg-core'

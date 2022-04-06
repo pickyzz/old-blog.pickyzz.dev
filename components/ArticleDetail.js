@@ -28,6 +28,7 @@ import { Code } from 'react-notion-x/build/third-party/code'
 import { Equation } from 'react-notion-x/build/third-party/equation'
 import { Pdf } from 'react-notion-x/build/third-party/pdf'
 import { Modal } from 'react-notion-x/build/third-party/modal'
+import { Tweet } from 'react-static-tweets'
 import ArticleCopyright from './ArticleCopyright'
 import WordCount from './WordCount'
 
@@ -139,6 +140,7 @@ export default function ArticleDetail (props) {
                     Collection,
                     Equation,
                     Pdf,
+                    Tweet,
                     Modal
                   }}
                 />
