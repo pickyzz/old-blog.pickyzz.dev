@@ -6,7 +6,16 @@ module.exports = withBundleAnalyzer({
     webpack5: true
   },
   images: {
-    domains: ['gravatar.com', 'www.notion.so', 'avatars.githubusercontent.com', 'images.unsplash.com', 'i.imgur.com']
+    domains: 
+    [
+      'gravatar.com',
+      'www.notion.so',
+      'avatars.githubusercontent.com',
+      'images.unsplash.com',
+      'i.imgur.com',
+      'pbs.twimg.com',
+      'https://og.pickyzz.dev'
+    ]
   },
   async headers () {
     return [
