@@ -64,7 +64,7 @@ export default function ArticleDetail (props) {
   })
 
   return (<>
-      <div id="container" ref={targetRef} className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
+      <div id="container" ref={targetRef} className="shadow animate__animated animate__fadeIn md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
           <article itemScope itemType="https://schema.org/Movie"
             className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-0 md:px-0 xl:px-0 dark:border-gray-700 bg-white dark:bg-gray-800"
           >
@@ -78,13 +78,13 @@ export default function ArticleDetail (props) {
 
               {post.type[0] === 'Post' && (<>
                 {/* 文章Title */}
-                <div className="font-bold text-center text-3xl text-white dark:text-white font-Maitree pt-6">
+                <div className="animate__animated animate__slideInDown font-bold text-center text-3xl text-white dark:text-white font-Maitree pt-6">
                     {post.title}
                 </div>
               </>)}
 
               {post.type && !post.type.includes('Page') && (
-                <section className="flex-wrap flex justify-center mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
+                <section className="animate__animated animate__slideInDown flex-wrap flex justify-center mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
                   <div>
                     <Link href={`/category/${post.category}`} passHref>
                       <a className="cursor-pointer text-md mr-2 hover:text-black dark:hover:text-white border-b dark:border-gray-500 border-dashed">
@@ -122,7 +122,7 @@ export default function ArticleDetail (props) {
             </header>)}
 
             {post.type[0] === 'Page' && (<header className='h-full w-full md:w-auto'>
-              <div className="font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
+              <div className="animate__animated animate__slideInDown font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
                 {post.title}
               </div>
             </header>)}

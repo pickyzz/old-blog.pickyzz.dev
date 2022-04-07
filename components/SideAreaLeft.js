@@ -24,7 +24,7 @@ const SideAreaLeft = ({ title, tags, currentTag, post, posts, categories, curren
   const postCount = posts?.length || 0
   return <>
 
-    <section className={(!post ? 'sticky top-8 ' : ' ') + ' w-60'}>
+    <section className={(!post ? 'sticky top-8 ' : ' ') + 'animate__animated animate__fadeInLeft w-60'}>
 
       {/* profile image */}
       <section className='shadow hidden lg:block mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200 py-6'>
@@ -47,7 +47,7 @@ const SideAreaLeft = ({ title, tags, currentTag, post, posts, categories, curren
     </section>
 
     {showToc && (
-      <section className='shadow sticky top-8 pb-20  bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
+      <section className='animate__animated animate__fadeInLeft shadow sticky top-8 pb-20  bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
         <div className='border-b text-center text-2xl bg-white text-black dark:border-gray-700 dark:bg-gray-700 dark:text-white py-6 px-6'>
           {locale.COMMON.TABLE_OF_CONTENTS}
         </div>
