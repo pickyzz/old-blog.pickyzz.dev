@@ -25,6 +25,7 @@ const BLOG = {
   sortByDate: true,
   showAbout: true, // WIP 是否显示关于
   showArchive: true, // WIP 是否显示归档
+  pageHeader: false,
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og.pickyzz.dev', // The link to generate OG image, don't end with a slash
   seo: {

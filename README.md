@@ -1,3 +1,5 @@
-## resource of pickyzz.dev
+### resource of pickyzz.dev
 
-original theme by [tangly1024.com](https://tangly1024.com)
+Build with NextJs and use Notion as content service
+
+Original theme by [tangly1024.com](https://tangly1024.com)

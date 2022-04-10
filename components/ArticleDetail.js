@@ -121,7 +121,7 @@ export default function ArticleDetail (props) {
               )}
             </header>)}
 
-            {post.type[0] === 'Page' && (<header className='h-full w-full md:w-auto'>
+            {post.type[0] === 'Page' && BLOG.pageHeader && (<header className='h-full w-full md:w-auto'>
               <div className="animate__animated animate__slideInDown font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
                 {post.title}
               </div>
