@@ -104,13 +104,13 @@ export default function Header () {
   return (
     <header
       id="header"
-      className="animate__animated animate__fadeIn duration-500 md:bg-scroll w-full bg-cover bg-center h-64 bg-black"
+      className="animate__animated animate__fadeIn duration-500 md:bg-scroll w-full bg-cover bg-center h-72 bg-black"
       style={{
         backgroundImage:
           `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${url}${BLOG.home.homeBannerImage}")`
       }}
     >
-      <div className="absolute flex h-80 items-center lg:-mt-10 justify-center w-full text-2xl md:text-5xl text-white">
+      <div className="absolute flex h-80 items-center lg:-mt-6 justify-center w-full text-2xl md:text-5xl text-white">
         <div id='typed' className='flex text-center font-Firacode'/>
       </div>
 

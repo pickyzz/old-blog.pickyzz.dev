@@ -6,7 +6,7 @@ const BLOG = {
   link: 'https://pickyzz.dev',
   description: 'Just a man whom learing to code',
   home: {
-    showHomeBanner: true, // index's banner [true,false]
+    showHomeBanner: false, // index's banner [true,false]
     homeBannerStrings: ['#StopWar'], // 首页文字 ['Type less think more']
     homeBannerImage: '/4436554.png', // ex. '/4436554.png' mean file is in public/4436554.png
   },
