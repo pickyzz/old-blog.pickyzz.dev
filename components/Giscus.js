@@ -1,6 +1,6 @@
 import BLOG from '@/blog.config'
 import { useEffect } from 'react'
-// import { useGlobal } from '@/lib/global'
+import { loadUserThemeFromCookies } from '@/lib/theme'
 
 /**
  * ระบบคอมเม้น
@@ -10,8 +10,8 @@ import { useEffect } from 'react'
  * @constructor
  */
 const Giscus = ({ pathname, layout }) => {
-  // const { theme } = useGlobal()
   useEffect(() => {
+    const theme = loadUserThemeFromCookies()
     const script = document.createElement('script')
     const anchor = document.getElementById('comments')
     script.setAttribute('src', 'https://giscus.app/client.js')
@@ -22,7 +22,7 @@ const Giscus = ({ pathname, layout }) => {
     script.setAttribute('data-mapping', pathname)
     script.setAttribute('data-reactions-enabled', 1)
     script.setAttribute('data-emit-metadata', 0)
-    script.setAttribute('data-theme', 'light')
+    script.setAttribute('data-theme', theme)
     script.setAttribute('data-lang', 'en')
     script.setAttribute('crossorigin', 'anonymous')
     script.setAttribute('async', true)

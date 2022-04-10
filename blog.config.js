@@ -53,7 +53,7 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis, giscus
-    provider: 'gitalk', // leave it empty if you don't need any comment plugin
+    provider: 'giscus', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
       repo: 'pickyzz-blog-comment', // The repository of store comments
       owner: 'pickyzz',
