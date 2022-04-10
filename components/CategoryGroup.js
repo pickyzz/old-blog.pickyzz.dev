@@ -13,7 +13,7 @@ const CategoryGroup = ({ currentCategory, categories }) => {
             ? 'hover:text-white dark:hover:text-white bg-gray-600 text-white '
             : 'dark:text-gray-400 text-gray-500 hover:text-white hover:bg-gray-500 dark:hover:text-white') +
             '  text-sm w-full items-center duration-300 px-3 mx-2 cursor-pointer py-1 font-normal'}>
-            <FontAwesomeIcon icon={selected ? faFolderOpen : faFolder} className={`${selected ? 'text-white' : 'text-gray-400'} mr-2`} />{category}({categories[category]})
+            <FontAwesomeIcon icon={selected ? faFolderOpen : faFolder} className={`${selected ? 'text-white' : 'text-gray-400'} mr-2`} />{category} ({categories[category]})
             </a>
         </Link>
       })}

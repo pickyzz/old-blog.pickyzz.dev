@@ -25,7 +25,7 @@ const CategoryList = ({ currentCategory, categories }) => {
           >
             <a>
             <FontAwesomeIcon icon={selected ? faFolderOpen : faFolder} className='mr-1' />
-              {`${category} `}
+              {`${category}`}
             </a>
           </li>
         </Link>)

@@ -9,7 +9,7 @@ const TagItemMini = ({ tag, selected = false }) => {
        ${selected
       ? 'text-white dark:text-gray-300 bg-black dark:bg-gray-700 dark:hover:bg-gray-800'
       : `text-gray-600 hover:shadow-xl dark:border-gray-400 notion-${tag.color}_background dark:bg-gray-700 dark:hover:bg-gray-800`}` }>
-    <div className='font-normal dark:text-gray-400'>{selected && <FontAwesomeIcon icon={faTag} className='mr-1'/>} {tag.name + (tag.count ? `(${tag.count})` : '')} </div>
+    <div className='font-normal dark:text-gray-400'>{selected && <FontAwesomeIcon icon={faTag} className='mr-1'/>} {tag.name + (tag.count ? ` (${tag.count})` : '')} </div>
     </a>
   </Link>
 }

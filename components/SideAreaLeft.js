@@ -46,7 +46,7 @@ const SideAreaLeft = ({ title, tags, currentTag, post, posts, categories, curren
 
     </section>
 
-    {showToc && (
+    {showToc && post.type[0] === 'Post' && (
       <section className='animate__animated animate__fadeInLeft shadow sticky top-8 pb-20 bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
         <div className='border-b text-center text-2xl bg-white text-black dark:border-gray-700 dark:bg-gray-800 dark:text-white py-6 px-6'>
           {locale.COMMON.TABLE_OF_CONTENTS}

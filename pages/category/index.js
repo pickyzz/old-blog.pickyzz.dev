@@ -22,7 +22,7 @@ export default function Category ({ tags, allPosts, categories }) {
           {Object.keys(categories).map(category => {
             return <Link key={category} href={`/category/${category}`} passHref>
               <div className={'hover:text-black dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600 px-5 cursor-pointer py-2 hover:bg-gray-100'}>
-                <FontAwesomeIcon icon={faFolder} className='mr-4' />{category}({categories[category]})</div>
+                <FontAwesomeIcon icon={faFolder} className='mr-2' />{category} ({categories[category]})</div>
             </Link>
           })}
         </div>

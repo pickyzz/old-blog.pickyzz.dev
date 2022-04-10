@@ -65,32 +65,17 @@ const SideAreaRight = ({
       {/* <Analytics postCount={postCount}/> */}
 
       <div className="sticky top-8 animate__animated animate__fadeInRight">
-          {/* {showToc && (
-          <section className='pb-10 mb-5  bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
-            <div className='border-b text-center text-2xl bg-white text-black dark:border-gray-700 dark:bg-gray-700 dark:text-white py-6 px-6'>
-              {locale.COMMON.TABLE_OF_CONTENTS}
-            </div>
-            <Toc toc={post.toc} targetRef={targetRef} />
-          </section>
-          )} */}
+        {/* {showToc && (
+        <section className='pb-10 mb-5  bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
+          <div className='border-b text-center text-2xl bg-white text-black dark:border-gray-700 dark:bg-gray-700 dark:text-white py-6 px-6'>
+            {locale.COMMON.TABLE_OF_CONTENTS}
+          </div>
+          <Toc toc={post.toc} targetRef={targetRef} />
+        </section>
+        )} */}
 
-        {/* 分类  */}
-        {categories && (
-          <section className='shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
-            <div className='text-md px-5 mb-2 flex flex-nowrap justify-between font-normal'>
-              <div className='pb-1 text-gray-600  dark:text-gray-300'><FontAwesomeIcon icon={faThList} className='mr-2' />{locale.COMMON.CATEGORY}</div>
-              <Link href='/category' passHref>
-                <a className='text-gray-400 hover:text-black dark:text-gray-400 dark:hover:text-white hover:underline cursor-pointer'>
-                  {locale.COMMON.MORE} <FontAwesomeIcon icon={faAngleDoubleRight} />
-                </a>
-              </Link>
-            </div>
-            <CategoryGroup currentCategory={currentCategory} categories={categories} />
-          </section>
-        )}
-
-        {/* 最新文章 */}
-        {posts && (
+        {/* Latest update bar */}
+        {posts && post && (
           <section className="shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200">
             <div className="text-md pb-2 px-5 flex flex-nowrap justify-between">
               <div className="font-normal text-gray-600  dark:text-gray-300">
@@ -102,12 +87,27 @@ const SideAreaRight = ({
           </section>
         )}
 
+        {/* 分类  */}
+        {categories && (
+          <section className='shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
+            <div className='text-md px-5 mb-2 flex flex-nowrap justify-between font-normal'>
+              <div className='pb-1 text-gray-600  dark:text-gray-300'><FontAwesomeIcon icon={faThList} className='mr-2' />{locale.COMMON.CATEGORY}</div>
+              <Link href='/category' passHref>
+                <a className='text-gray-400 text-sm mt-1 hover:text-black dark:text-gray-400 dark:hover:text-white hover:underline cursor-pointer'>
+                  {locale.COMMON.MORE} <FontAwesomeIcon icon={faAngleDoubleRight} />
+                </a>
+              </Link>
+            </div>
+            <CategoryGroup currentCategory={currentCategory} categories={categories} />
+          </section>
+        )}
+
         {/* <section className="shadow py-4 px-5 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200">
           <SearchInput currentTag={currentTag} currentSearch={currentSearch}/>
         </section> */}
 
-        {/* 标签云  */}
-         {tags && (
+        {/* tag bar */}
+        {tags && (
           <section className="shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200">
             <div className="text-md  pb-1 px-5 flex flex-nowrap justify-between font-normal dark:text-gray-200">
               <div className="text-gray-600 dark:text-gray-200">
@@ -115,7 +115,7 @@ const SideAreaRight = ({
                 {locale.COMMON.TAGS}
               </div>
               <Link href="/tag" passHref>
-                <a className="text-gray-400 hover:text-black  dark:hover:text-white hover:underline cursor-pointer">
+                <a className="text-gray-400 text-sm mt-1 hover:text-black dark:hover:text-white hover:underline cursor-pointer">
                   {locale.COMMON.MORE}{' '}
                   <FontAwesomeIcon icon={faAngleDoubleRight} />
                 </a>
@@ -125,7 +125,7 @@ const SideAreaRight = ({
               <TagGroups tags={tags} currentTag={currentTag} />
             </div>
           </section>
-         )}
+        )}
 
       </div>
     </>
