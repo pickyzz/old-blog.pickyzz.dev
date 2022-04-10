@@ -21,7 +21,6 @@ export default function FloatDarkModeButton () {
 
   const { changeTheme } = useGlobal()
   const userTheme = loadUserThemeFromCookies()
-  // 用户手动设置主题
   const handleChangeDarkMode = () => {
     const newTheme = userTheme === 'light' ? 'dark' : 'light'
     saveTheme(newTheme)
@@ -36,15 +35,25 @@ export default function FloatDarkModeButton () {
       onClick={handleChangeDarkMode}
       className={
         (show ? '' : ' hidden ') +
-        ' animate__fadeInRight  px-3.5 py-3 animate__animated animate__faster shadow-card fixed right-2 bottom-36 z-10 duration-200 text-xs cursor-pointer rounded-xl' +
-        ' text-black dark:border-gray-500 flex justify-center items-center w-9 h-9 glassmorphism dark:bg-gray-700 dark:text-gray-200'
+        ' animate__animated animate__fadeInRight px-3.5 py-3 animate__animated animate__faster shadow-card fixed right-2 bottom-36 z-10 duration-200 text-xs cursor-pointer rounded-xl' +
+        ' text-black dark:border-gray-500 flex justify-center items-center w-9 h-9 glassmorphism dark:bg-gray-800 dark:text-gray-200'
       }
     >
-      <FontAwesomeIcon
-        icon={userTheme === 'dark' ? faSun : faMoon}
-        id="darkModeButton"
-        className="hover:scale-150 transform duration-200"
-      />
+      {userTheme === 'dark' && (<>
+        <FontAwesomeIcon
+          icon={faSun}
+          id="darkModeButton"
+          className="hover:scale-150 transform duration-200"
+        />
+      </>)}
+
+      {userTheme === 'light' && (<>
+        <FontAwesomeIcon
+          icon={faMoon}
+          id="darkModeButton"
+          className="hover:scale-150 transform duration-200"
+        />
+      </>)}
     </div>
   )
 }
