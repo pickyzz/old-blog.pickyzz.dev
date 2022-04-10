@@ -50,7 +50,7 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
 
       {/* Navigation Bar */}
       <div id='sticky-nav' className='flex animate__animated animate__fadeInDown fixed lg:relative w-full top-0 z-20 transform duration-300'>
-        <div className='w-full flex justify-between items-center p-4 glassmorphism'>
+        <div className='w-full flex justify-between items-center p-4'>
           {/* Left LOGO title */}
           <div className='flex flex-none flex-grow-0'>
             <div onClick={() => { drawer.current.handleSwitchSideDrawerVisible() }}

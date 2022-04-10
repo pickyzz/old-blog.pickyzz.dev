@@ -63,14 +63,14 @@ const Toc = ({ toc, targetRef }) => {
             key={id}
             href={`#${id}`}
             className={`notion-table-of-contents-item duration-300 transform font-light
-            notion-table-of-contents-item-indent-level-${tocItem.indentLevel} `}
+            notion-table-of-contents-item-indent-level-${tocItem.indentLevel} dark:text-white `}
           >
             <span
               style={{
                 display: 'inline-block',
                 marginLeft: tocItem.indentLevel * 16
               }}
-              className={`${activeSection === id && ' font-bold text-red-400 underline'}`}
+              className={`${activeSection === id && ' font-bold text-red-400 dark:text-blue-300 underline'}`}
             >
               {tocItem.text}
             </span>
