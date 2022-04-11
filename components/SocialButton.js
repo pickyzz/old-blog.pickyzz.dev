@@ -13,19 +13,19 @@ const SocialButton = () => {
   return <div className='w-52 justify-center flex-wrap flex'>
     <div className='space-x-3 text-xl text-gray-600 dark:text-gray-400 '>
       {BLOG.socialLink.github && <a target='_blank' rel='noreferrer' title={'github'} href={BLOG.socialLink.github} >
-        <FontAwesomeIcon icon={faGithub} className='transform hover:scale-125 duration-150'/>
+        <FontAwesomeIcon icon={faGithub} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
       </a>}
       {BLOG.socialLink.twitter && <a target='_blank' rel='noreferrer' title={'twitter'} href={BLOG.socialLink.twitter} >
-        <FontAwesomeIcon icon={faTwitter} className='transform hover:scale-125 duration-150'/>
+        <FontAwesomeIcon icon={faTwitter} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
       </a>}
       {BLOG.socialLink.telegram && <a target='_blank' rel='noreferrer' href={BLOG.socialLink.telegram} title={'telegram'} >
-        <FontAwesomeIcon icon={faTelegram} className='transform hover:scale-125 duration-150'/>
+        <FontAwesomeIcon icon={faTelegram} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
       </a>}
       {BLOG.socialLink.twitch && <a target='_blank' rel='noreferrer' title={'Twitch'} href={BLOG.socialLink.twitch} >
-        <FontAwesomeIcon icon={faTwitch} className='transform hover:scale-125 duration-150'/>
+        <FontAwesomeIcon icon={faTwitch} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
       </a>}
       {BLOG.email && <a target='_blank' rel='noreferrer' title={'email'} href={`mailto:${BLOG.email}`} >
-        <FontAwesomeIcon icon={faEnvelope} className='transform hover:scale-125 duration-150'/>
+        <FontAwesomeIcon icon={faEnvelope} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
       </a>}
     </div>
   </div>

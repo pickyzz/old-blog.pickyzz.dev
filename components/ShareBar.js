@@ -8,10 +8,8 @@ import { useGlobal } from '@/lib/global'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookSquare,
-  // faQq,
   faTelegram,
   faTwitterSquare,
-  // faWeibo,
   faWeixin
 } from '@fortawesome/free-brands-svg-icons'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
@@ -47,45 +45,35 @@ const ShareBar = ({ post }) => {
       <div className='hidden md:block text-gray-800 dark:text-gray-300 mr-2 my-2 whitespace-nowrap'>{locale.COMMON.SHARE}:</div>
       <div className='text-3xl cursor-pointer'>
         <a className='text-blue-700' target='_blank' rel='noreferrer' href={`https://www.facebook.com/sharer.php?u=${shareUrl}`} >
-          <FontAwesomeIcon icon={faFacebookSquare}/>
+          <FontAwesomeIcon icon={faFacebookSquare} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
         </a>
       </div>
       <div className='text-3xl cursor-pointer'>
         <a className='text-blue-400' target='_blank' rel='noreferrer' href={`https://twitter.com/intent/tweet?title=${post.title}&url=${shareUrl} via @p1ckyzz`} >
-          <FontAwesomeIcon icon={faTwitterSquare}/>
+          <FontAwesomeIcon icon={faTwitterSquare} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
         </a>
       </div>
       <div className='text-3xl cursor-pointer'>
         <a className='text-blue-500' target='_blank' rel='noreferrer' href={`https://telegram.me/share/url?url=${shareUrl}&text=${post.title}`} >
-        <FontAwesomeIcon icon={faTelegram}/>
+        <FontAwesomeIcon icon={faTelegram} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
         </a>
       </div>
       <div className='cursor-pointer text-2xl'>
         <a className='text-green-600' ref={btnRef} onMouseEnter={openPopover} onMouseLeave={closePopover}>
-          <FontAwesomeIcon icon={faWeixin}/>
+          <FontAwesomeIcon icon={faWeixin} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
           <div ref={popoverRef} className={(qrCodeShow ? 'animate__animated animate__fadeIn ' : 'hidden') + ' text-center py-2'}>
             <div className='p-2 bg-white border-0 duration-200 transform block z-50 font-normal shadow-xl mr-10'>
               <QRCode value={shareUrl} fgColor='#000000' />
             </div>
-            <span className='bg-white text-black font-semibold p-1 mb-0 rounded-t-lg text-sm mx-auto mr-10'>
+            <span className='bg-white text-black dark:bg-transparent dark:text-white font-semibold p-1 mb-0 rounded-t-lg text-sm mx-auto mr-10'>
             {locale.COMMON.SCAN_QR_CODE}
             </span>
           </div>
         </a>
       </div>
-      {/* <div className='cursor-pointer text-2xl'>
-        <a className='text-red-600' target='_blank' rel='noreferrer'href={`https://service.weibo.com/share/share.php?url=${shareUrl}&title=${post.title}`} >
-          <FontAwesomeIcon icon={faWeibo}/>
-        </a>
-      </div> */}
-      {/* <div className='cursor-pointer text-2xl'>
-        <a className='text-blue-400' target='_blank' rel='noreferrer'href={`http://connect.qq.com/widget/shareqq/index.html?url=${shareUrl}&sharesource=qzone&title=${post.title}&desc=${post.summary}`} >
-          <FontAwesomeIcon icon={faQq}/>
-        </a>
-      </div> */}
       <div className='cursor-pointer text-2xl'>
         <a className='text-yellow-600' onClick={copyUrl} >
-          <FontAwesomeIcon icon={faLink}/>
+          <FontAwesomeIcon icon={faLink} className='transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105'/>
         </a>
       </div>
     </div>

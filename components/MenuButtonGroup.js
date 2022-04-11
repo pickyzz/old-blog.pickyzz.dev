@@ -23,7 +23,7 @@ const MenuButtonGroup = ({ allowCollapse = false }) => {
     // { id: 9, icon: 'faTelegram', name: 'Telegram', to: 'https://t.me/tangly_1024', show: true }
   ]
   return <nav id='nav'>
-    <div className='leading-8 text-gray-500 dark:text-gray-400 '>
+    <div className='leading-8 text-gray-500 dark:text-gray-400'>
       {links.map(link => {
         if (link.show) {
           const selected = (router.pathname === link.to) || (router.asPath === link.to)
