@@ -17,7 +17,7 @@ const BLOG = {
   appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'font-sans tracking-wider subpixel-antialiased', // 文章字体 ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
   lightBackground: '#fffefc', // use hex value, don't forget '#' e.g #fffefc
-  darkBackground: '#111827', // use hex value, don't forget '#'
+  darkBackground: '#15141b', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy in a folder
   since: 2020, // if leave this empty, current year will be used.
   postListStyle: 'page', // ['page','scroll']

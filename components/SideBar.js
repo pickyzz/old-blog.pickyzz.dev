@@ -1,14 +1,14 @@
 import React from 'react'
 import MenuButtonGroup from '@/components/MenuButtonGroup'
 import InfoCard from '@/components/InfoCard'
-import TagGroups from '@/components/TagGroups'
+// import TagGroups from '@/components/TagGroups'
 import LatestPostsGroup from '@/components/LatestPostsGroup'
 import CategoryGroup from '@/components/CategoryGroup'
 import SearchInput from '@/components/SearchInput'
 import Link from 'next/link'
 import { useGlobal } from '@/lib/global'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleRight, faArchive, faTags, faThList } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleRight, faArchive, faThList } from '@fortawesome/free-solid-svg-icons'
 
 /**
  * 侧边栏
@@ -64,7 +64,7 @@ const SideBar = ({ title, tags, currentTag, post, posts, categories, currentCate
       )}
 
       {/* 标签云  */}
-      {tags && (
+      {/* {tags && (
         <section className='mt-8'>
           <div className='text-sm py-2 px-5 flex flex-nowrap justify-between font-light dark:text-gray-200'>
             <div className='text-gray-600 dark:text-gray-200'><FontAwesomeIcon icon={faTags} className='mr-2'/>{locale.COMMON.TAGS}</div>
@@ -78,7 +78,7 @@ const SideBar = ({ title, tags, currentTag, post, posts, categories, currentCate
             <TagGroups tags={tags} currentTag={currentTag} />
           </div>
         </section>
-      )}
+      )} */}
     </div>
 
     {/* <section className='bg-white dark:bg-gray-900'> */}

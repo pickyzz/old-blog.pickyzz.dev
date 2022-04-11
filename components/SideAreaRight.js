@@ -1,7 +1,7 @@
 import LatestPostsGroup from '@/components/LatestPostsGroup'
-import TagGroups from '@/components/TagGroups'
+// import TagGroups from '@/components/TagGroups'
 import { useGlobal } from '@/lib/global'
-import { faAngleDoubleRight, faHistory, faTags, faThList } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleRight, faHistory, faThList } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
@@ -75,7 +75,7 @@ const SideAreaRight = ({
         )} */}
 
         {/* Latest update bar */}
-        {posts && post && (
+        {posts && (
           <section className="shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200">
             <div className="text-md pb-2 px-5 flex flex-nowrap justify-between">
               <div className="font-normal text-gray-600  dark:text-gray-300">
@@ -107,7 +107,7 @@ const SideAreaRight = ({
         </section> */}
 
         {/* tag bar */}
-        {tags && (
+        {/* {tags && (
           <section className="shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200">
             <div className="text-md  pb-1 px-5 flex flex-nowrap justify-between font-normal dark:text-gray-200">
               <div className="text-gray-600 dark:text-gray-200">
@@ -125,7 +125,7 @@ const SideAreaRight = ({
               <TagGroups tags={tags} currentTag={currentTag} />
             </div>
           </section>
-        )}
+        )} */}
 
       </div>
     </>

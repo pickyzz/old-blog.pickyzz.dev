@@ -1,9 +1,9 @@
 import { getAllCategories, getAllPosts, getAllTags } from '@/lib/notion'
 import BLOG from '@/blog.config'
-import StickyBar from '@/components/StickyBar'
+// import StickyBar from '@/components/StickyBar'
 import BaseLayout from '@/layouts/BaseLayout'
 import BlogPostListScroll from '@/components/BlogPostListScroll'
-import TagList from '@/components/TagList'
+// import TagList from '@/components/TagList'
 import { getNotionPageData } from '@/lib/notion/getNotionData'
 import { useGlobal } from '@/lib/global'
 
@@ -17,15 +17,15 @@ export default function Tag ({ tags, allPosts, filteredPosts, tag, categories })
   }
 
   // 将当前选中的标签置顶🔝
-  if (!tags) tags = []
-  const currentTag = tags?.find(r => r?.name === tag)
-  const newTags = currentTag ? [currentTag].concat(tags.filter(r => r?.name !== tag)) : tags.filter(r => r?.name !== tag)
+  // if (!tags) tags = []
+  // const currentTag = tags?.find(r => r?.name === tag)
+  // const newTags = currentTag ? [currentTag].concat(tags.filter(r => r?.name !== tag)) : tags.filter(r => r?.name !== tag)
 
   return <BaseLayout meta={meta} tags={tags} currentTag={tag} categories={categories} totalPosts={allPosts}>
-      <StickyBar>
+      {/* <StickyBar>
           <TagList tags={newTags} currentTag={tag}/>
-      </StickyBar>
-      <div className='md:mt-8'>
+      </StickyBar> */}
+      <div className='md:mt-0'>
         <BlogPostListScroll posts={filteredPosts} tags={tags} currentTag={tag}/>
       </div>
   </BaseLayout>

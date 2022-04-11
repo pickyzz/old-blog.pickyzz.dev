@@ -79,11 +79,14 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
             <Link href='/archive'>
               <a className='hover:scale-105 duration-100 transform'>{locale.NAV.ARCHIVE}</a>
             </Link>
-            <Link href='/about'>
-              <a className='hover:scale-105 duration-100 transform'>{locale.NAV.ABOUT}</a>
+            <Link href='/tag'>
+              <a className='hover:scale-105 duration-100 transform'>{locale.NAV.TAG}</a>
             </Link>
             <Link href='/feed'>
               <a className='hover:scale-105 duration-100 transform' target='_blank' rel='noreferrer'>{locale.NAV.RSS}</a>
+            </Link>
+            <Link href='/about'>
+              <a className='hover:scale-105 duration-100 transform'>{locale.NAV.ABOUT}</a>
             </Link>
           </div>
         </div>
