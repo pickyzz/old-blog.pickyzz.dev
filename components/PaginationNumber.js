@@ -17,7 +17,7 @@ const PaginationNumber = ({ page, showNext, totalPage }) => {
   const pages = generatePages(page, currentPage, totalPage)
 
   return (
-    <div className='my-5 flex justify-center items-end font-medium text-black hover:shadow-xl duration-500 bg-white dark:bg-gray-700 dark:text-gray-300 py-3 shadow space-x-2'>
+    <div className='my-5 flex justify-center items-end font-medium text-black hover:shadow-xl duration-500 bg-white dark:bg-gray-800 dark:text-gray-300 py-3 shadow space-x-2'>
 
       {/* 上一页 */}
       <Link
@@ -49,7 +49,7 @@ const PaginationNumber = ({ page, showNext, totalPage }) => {
 
 function getPageElement (page, currentPage) {
   return <Link href={page === 1 ? '/' : `/page/${page}`} key={page} passHref>
-      <a className={(page + '' === currentPage + '' ? 'font-bold bg-gray-500 dark:bg-gray-400 text-white ' : 'border-t-2 duration-500 border-white hover:border-gray-400 ') +
+      <a className={(page + '' === currentPage + '' ? 'font-bold bg-gray-400 dark:bg-gray-700 text-white ' : 'border-t-2 duration-500 border-white hover:border-gray-400 ') +
       ' border-white dark:border-gray-700 dark:hover:border-gray-400 cursor-pointer w-6 text-center font-light hover:font-bold'}>
       {page}
       </a>
