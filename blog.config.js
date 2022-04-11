@@ -4,7 +4,7 @@ const BLOG = {
   bio: 'Just learning to code',
   email: 'pikcolokung@gmail.com',
   link: 'https://pickyzz.dev',
-  description: 'Just a man whom learing to code',
+  description: 'Just learing to code',
   home: {
     showHomeBanner: false, // index's banner [true,false]
     homeBannerStrings: ['#StopWar'], // 首页文字 ['Type less think more']
@@ -49,8 +49,8 @@ const BLOG = {
   socialLink: {
     twitter: 'https://twitter.com/p1ckyzz',
     github: 'https://github.com/pickyzz',
-    telegram: 'https://t.me/pickyzz',
-    twitch: 'https://twitch.tv/pickyzz',
+    telegram: '',
+    twitch: '',
   },
   comment: {
     // support provider: gitalk, utterances, cusdis, giscus

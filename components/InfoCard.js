@@ -6,19 +6,19 @@ import SocialButton from './SocialButton'
 
 const InfoCard = ({ postCount }) => {
   return <>
-    <div className='flex flex-col items-center justify-center cursor-pointer' onClick={ () => { Router.push('/about') }}>
-        <div className='hover:scale-105 transform duration-200'>
+    <div className='flex flex-col items-center justify-center'>
+        <div id='profileImage' className='hover:scale-105 transform duration-200 cursor-pointer' onClick={ () => { Router.push('/about') }}>
           <Image
           alt={BLOG.title}
-          width={128}
-          height={128}
+          width={112}
+          height={112}
           loading='lazy'
           src='/avatar.png'
-          className='rounded-lg'
+          className='rounded-full'
         />
         </div>
-        <div className='text-2xl font-mono dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.author}</div>
-        <div className='font-light dark:text-white py-2 hover:scale-105 transform duration-200'>{BLOG.bio}</div>
+        <div className='text-2xl font-mono dark:text-white py-2 -mb-4'>{BLOG.author}</div>
+        <div className='font-light dark:text-white py-2 mb-2'>{BLOG.bio}</div>
         <SocialButton/>
     </div>
   </>
