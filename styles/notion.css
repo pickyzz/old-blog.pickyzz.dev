@@ -805,6 +805,7 @@ svg.notion-page-icon {
   display: flex;
   overflow: hidden;
   user-select: none;
+  @apply dark:border-gray-600 dark:rounded-[3px] ;
 }
 
 .notion-bookmark > div:first-child {

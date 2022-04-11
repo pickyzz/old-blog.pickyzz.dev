@@ -72,7 +72,7 @@ export default function ArticleDetail (props) {
             {post.type[0] === 'Post' && (<header
               className='h-full w-full md:w-auto overflow-hidden py-10 px-4 bg-cover bg-center'
               style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.4), rgba(0, 0, 0, 0.8) ),url(${post.page_cover || post.cover})`
+                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6) ),url(${post.page_cover || post.cover})`
               }}
             >
 
