@@ -38,7 +38,7 @@ const PaginationNumber = ({ page, showNext, totalPage }) => {
       <Link href={ { pathname: `/page/${currentPage + 1}`, query: router.query.s ? { s: router.query.s } : {} } } passHref>
         <div
           rel='next'
-          className={`${+showNext ? 'block' : 'invisible'} border-t-2 border-white dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-400 w-6 text-center cursor-pointer duration-500  hover:font-bold`}
+          className={`${+showNext ? 'block' : 'invisible'} border-white dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-400 w-6 text-center cursor-pointer duration-200  hover:font-bold`}
         >
           <FontAwesomeIcon icon={faAngleRight}/>
         </div>

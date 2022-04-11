@@ -16,11 +16,11 @@ const BLOG = {
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
   appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'font-sans tracking-wider subpixel-antialiased', // 文章字体 ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
-  lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
+  lightBackground: '#fffefc', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#111827', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy in a folder
   since: 2020, // if leave this empty, current year will be used.
-  postListStyle: 'page', // ['page','scroll]
+  postListStyle: 'page', // ['page','scroll']
   postsPerPage: 10, // post counts per page
   sortByDate: true,
   showAbout: true, // WIP 是否显示关于
