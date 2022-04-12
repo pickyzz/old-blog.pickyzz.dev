@@ -57,7 +57,7 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
                 className='w-8 cursor-pointer dark:text-gray-300 block lg:hidden'>
               <FontAwesomeIcon icon={faBars} size={'lg'}/>
             </div>
-            <div className='animate-bounce relative w-10 hidden lg:block' ><Image
+            <div className='animate-bounce relative w-10 block' ><Image
               alt={BLOG.title}
               layout='fill'
               loading='lazy'
@@ -72,7 +72,7 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
           </div>
 
           {/* top menu */}
-          <div className='mr-1 flex flex-nowrap flex-grow justify-end items-center text-sm space-x-4 font-mono dark:text-gray-200'>
+          <div className='invisible md:visible mr-1 flex flex-nowrap flex-grow justify-end items-center text-sm space-x-4 font-mono dark:text-gray-200'>
           {/* <Link href='/'>
               <a className='hover:scale-105 duration-100 transform'>{locale.NAV.INDEX}</a>
             </Link> */}

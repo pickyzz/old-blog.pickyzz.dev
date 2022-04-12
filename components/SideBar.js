@@ -38,6 +38,11 @@ const SideBar = ({ title, tags, currentTag, post, posts, categories, currentCate
         <SearchInput currentTag={currentTag} currentSearch={currentSearch} />
       </section>
 
+      {/* Menu */}
+      <section className='shadow block mb-5 py-4  bg-white dark:bg-gray-900 '>
+        <MenuButtonGroup allowCollapse={true} />
+      </section>
+
       {/* 最新文章 */}
       {posts && (
         <section className='mt-4'>
