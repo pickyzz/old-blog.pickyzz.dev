@@ -15,7 +15,7 @@ const CommonHead = ({ meta }) => {
 
   const ogImage = `${BLOG.ogImageGenerateURL}/${encodeURIComponent(
     title
-  )}.png?theme=light&md=1&fontSize=75px&images=https%3A%2F%2Fraw.githubusercontent.com%2Fpickyzz%2Fpickyzz.ga%2F9a319c06dae88b888f1c1d1e25f175152ab397b8%2Fpublic%2Ffavicon.svg&widths=350&heights=350`
+  )}.png?theme=dark&md=1&fontSize=75px&images=https%3A%2F%2Fraw.githubusercontent.com%2Fpickyzz%2Fpickyzz.ga%2F9a319c06dae88b888f1c1d1e25f175152ab397b8%2Fpublic%2Ffavicon.svg&widths=350&heights=350`
 
   return <Head>
     <title>{title}</title>

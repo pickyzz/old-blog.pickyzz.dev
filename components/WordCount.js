@@ -27,7 +27,7 @@ function countWords () {
       const wordCount = fnGetCpmisWords(articleText)
       // 阅读速度 300-500每分钟
       document.getElementById('wordCount').innerHTML = wordCount
-      document.getElementById('readTime').innerHTML = Math.floor(wordCount / 400) + 1
+      document.getElementById('readTime').innerHTML = Math.floor(wordCount / 500) + 1
       const wordCountWrapper = document.getElementById('wordCountWrapper')
       wordCountWrapper.classList.remove('hidden')
     }
