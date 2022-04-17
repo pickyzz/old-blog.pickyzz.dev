@@ -1,4 +1,5 @@
 import CommonHead from '@/components/CommonHead'
+import CookieAcception from '@/components/cookieConsent'
 import FloatDarkModeButton from '@/components/FloatDarkModeButton'
 import Footer from '@/components/Footer'
 import JumpToBottomButton from '@/components/JumpToBottomButton'
@@ -74,6 +75,7 @@ const BaseLayout = ({
       <JumpToTopButton targetRef={targetRef} showPercent={false} />
       {/* <JumpToBottomButton targetRef={targetRef} showPercent={false}/> */}
       <FloatDarkModeButton/>
+      <CookieAcception/>
       </>
   )
 }
