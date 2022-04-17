@@ -1,10 +1,10 @@
 import { getAllCategories, getAllPosts, getAllTags } from '@/lib/notion'
 import BLOG from '@/blog.config'
-import StickyBar from '@/components/StickyBar'
+// import StickyBar from '@/components/StickyBar'
 import BaseLayout from '@/layouts/BaseLayout'
 import BlogPostListScroll from '@/components/BlogPostListScroll'
 import React from 'react'
-import CategoryList from '@/components/CategoryList'
+// import CategoryList from '@/components/CategoryList'
 import { getNotionPageData } from '@/lib/notion/getNotionData'
 import { useGlobal } from '@/lib/global'
 
@@ -16,10 +16,10 @@ export default function Category ({ tags, allPosts, filteredPosts, category, cat
     type: 'website'
   }
   return <BaseLayout meta={meta} tags={tags} currentCategory={category} totalPosts={allPosts} categories={categories}>
-      <StickyBar>
+      {/* <StickyBar>
         <CategoryList currentCategory={category} categories={categories} />
-      </StickyBar>
-      <div className='md:mt-8'>
+      </StickyBar> */}
+      <div className='md:mt-0'>
          <BlogPostListScroll posts={filteredPosts} tags={tags} currentCategory={category}/>
       </div>
   </BaseLayout>
