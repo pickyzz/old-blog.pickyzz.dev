@@ -24,10 +24,12 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
     if (scrollS >= windowTop && scrollS > 10) {
       const nav = document.querySelector('#sticky-nav')
       nav && nav.classList.replace('top-0', '-top-16')
+      nav && nav.classList.replace('glassmorphism', 'bg-transparent')
       windowTop = scrollS
     } else {
       const nav = document.querySelector('#sticky-nav')
       nav && nav.classList.replace('-top-16', 'top-0')
+      nav && nav.classList.replace('bg-transparent', 'glassmorphism')
       windowTop = scrollS
     }
   }, 200))
@@ -49,8 +51,8 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
       <SideBarDrawer post={post} currentTag={currentTag} cRef={drawer} tags={tags} posts={posts} categories={categories} currentCategory={currentCategory}/>
 
       {/* Navigation Bar */}
-      <div id='sticky-nav' className='flex animate__animated animate__fadeInDown fixed lg:relative w-full top-0 z-20 transform duration-300'>
-        <div className='w-full flex justify-between items-center p-4 glassmorphism'>
+      <div id='sticky-nav' className='flex animate__animated animate__fadeInDown fixed lg:relative w-full top-0 z-20 transform duration-300 glassmorphism'>
+        <div className='w-full flex justify-between items-center p-4'>
           {/* Left LOGO title */}
           <div className='flex flex-none flex-grow-0'>
             <div onClick={() => { drawer.current.handleSwitchSideDrawerVisible() }}

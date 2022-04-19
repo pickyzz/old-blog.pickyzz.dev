@@ -7,24 +7,24 @@ const BLOG = {
   description: 'Just learing to code',
   home: {
     showHomeBanner: false, // index's banner [true,false]
-    homeBannerStrings: ['#StopWar'], // 首页文字 ['Type less think more']
+    homeBannerStrings: ['#StopWar'], // ex. ['Type less think more']
     homeBannerImage: '/4436554.png', // ex. '/4436554.png' mean file is in public/4436554.png
   },
   avatar: './avatar.png',
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
   notionPageId: process.env.NOTION_PAGE_ID || '', // Important page_id！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
-  appearance: 'light', // ['light', 'dark', 'auto'],
-  font: 'font-sans tracking-wider subpixel-antialiased', // 文章字体 ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
+  appearance: 'dark', // ['light', 'dark', 'auto'],
+  font: 'font-sans tracking-wider subpixel-antialiased', // ['font-sans', 'font-serif', 'font-mono'] @see https://www.tailwindcss.cn/docs/font-family
   lightBackground: '#fffefc', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#15141b', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy in a folder
   since: 2020, // if leave this empty, current year will be used.
-  postListStyle: 'page', // ['page','scroll']
+  postListStyle: 'scroll', // ['page','scroll']
   postsPerPage: 10, // post counts per page
   sortByDate: true,
-  showAbout: true, // WIP 是否显示关于
-  showArchive: true, // WIP 是否显示归档
+  showAbout: true,
+  showArchive: true,
   pageHeader: false,
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og.pickyzz.dev', // The link to generate OG image, don't end with a slash
@@ -81,7 +81,7 @@ const BLOG = {
   googleAdsenseId: '', 
   DaoVoiceId: '', // DaoVoice http://dashboard.daovoice.io/get-started
   TidioId: '', // https://www.tidio.com/
-  isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
 
 }
 // export default BLOG

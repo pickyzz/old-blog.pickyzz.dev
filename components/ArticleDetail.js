@@ -44,6 +44,7 @@ export default function ArticleDetail (props) {
   const url = BLOG.link + useRouter().asPath
   const { locale } = useGlobal()
   const date = formatDate(post?.date?.start_date || post.createdTime, locale.LOCALE)
+  const editedTime = formatDate(post?.lastEditedTime || post.createdTime, locale.LOCALE)
 
   const zoom = typeof window !== 'undefined' && mediumZoom({
     container: '.notion-viewport',
@@ -147,7 +148,7 @@ export default function ArticleDetail (props) {
               )}
             </section>
 
-            <section className="px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600  dark:text-gray-400">
+            <section className="grid justify-items-end text-right mx-auto w-[72%] px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
               {/* ads google */}
               {/* <ins className="adsbygoogle"
                 style={{ display: 'block', textAlign: 'center' }}
@@ -156,6 +157,9 @@ export default function ArticleDetail (props) {
                 data-ad-format="fluid"
                 data-ad-client=""
                 data-ad-slot=""></ins> */}
+                <div className='pb-1 border-b dark:border-gray-500 border-dashed'>
+                  Last edited : {editedTime}
+                </div>
             </section>
 
             {/* 推荐文章 */}
