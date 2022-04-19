@@ -20,7 +20,7 @@ export default function Tag ({ tags, allPosts, categories }) {
         <div className='dark:text-gray-200 mb-5'><FontAwesomeIcon icon={faTags} className='mr-4'/>{locale.COMMON.TAGS}:</div>
         <div id='tags-list' className='flex flex-wrap'>
           { tags.map(tag => {
-            return <div key={tag.name} className='p-2 animate__animated animate__fadeIn'><TagItem key={tag.name} tag={tag} /></div>
+            return <div key={tag.name} className='p-2 animate__animated animate__zoomIn animate__faster'><TagItem key={tag.name} tag={tag} /></div>
           }) }
         </div>
       </div>
