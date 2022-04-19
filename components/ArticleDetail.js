@@ -123,13 +123,13 @@ export default function ArticleDetail (props) {
             </header>)}
 
             {post.type[0] === 'Page' && BLOG.pageHeader && (<header className='h-full w-full md:w-auto'>
-              <div className="animate__animated animate__slideInDown font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
+              <div className="animate__animated animate__slideInDown animate__slower font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
                 {post.title}
               </div>
             </header>)}
 
             {/* Notion文章主体 */}
-            <section id='notion-article' className='px-1 pt-8 md:px-24 xl:px-36'>
+            <section id='notion-article' className='animate__animated animate__fadeIn px-1 pt-8 md:px-24 xl:px-36'>
               {blockMap && (
                 <NotionRenderer
                   recordMap={blockMap}
@@ -148,7 +148,7 @@ export default function ArticleDetail (props) {
               )}
             </section>
 
-            <section className="grid justify-items-end text-right mx-auto w-[72%] px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
+            <section className="grid justify-items-end text-right md:px-24 xl:px-36 px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
               {/* ads google */}
               {/* <ins className="adsbygoogle"
                 style={{ display: 'block', textAlign: 'center' }}

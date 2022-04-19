@@ -13,12 +13,12 @@ const BlogPostCard = ({ post }) => {
 
       <div className='p-8 flex flex-col justify-between w-full'>
         <Link href={`${BLOG.path}/article/${post.slug}`} passHref>
-          <a className='cursor-pointer font-semibold font-Maitree text-xl xl:text-2xl leading-tight text-black dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400'>
+          <a className='animate__animated animate__fadeInDown cursor-pointer font-semibold font-Maitree text-xl xl:text-2xl leading-tight text-black dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400'>
             {post.title}
           </a>
         </Link>
 
-        <p className='my-8 font-IBM text-gray-700 dark:text-gray-300 text-sm font-normal leading-7'>{post.summary}</p>
+        <p className='animate__animated animate__fadeInDown my-8 font-IBM text-gray-700 dark:text-gray-300 text-sm font-normal leading-7'>{post.summary}</p>
 
         <div className='flex items-center justify-between flex-wrap dark:text-gray-500 text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 '>
           <div>
@@ -42,7 +42,7 @@ const BlogPostCard = ({ post }) => {
       {post?.page_cover && (
         <Link href={`${BLOG.path}/article/${post.slug}`} passHref>
         <div className='h-60 w-full xl:max-w-xs relative xl:h-full duration-200 cursor-pointer transform overflow-hidden'>
-          <Image className='hover:scale-105 transform duration-700' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
+          <Image className='animate__animated animate__zoomIn hover:scale-105 transform duration-700' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
         </div>
       </Link>
       )}

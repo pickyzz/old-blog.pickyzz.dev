@@ -42,9 +42,7 @@ const BLOG = {
     gaConfig: {
       measurementId: 'G-F0LYXZGWQ6' // e.g: G-XXXXXXXXXX
     },
-    baiduAnalytics: '', // e.g only need xxxxx -> https://hm.baidu.com/hm.js?[xxxxx]
     busuanzi: false, // see http://busuanzi.ibruce.info/
-    cnzzAnalytics: '' // 站长统计id only need xxxxxxxx -> https://s9.cnzz.com/z_stat.php?id=[xxxxxxxx]&web_id=[xxxxxxx]
   },
   socialLink: {
     twitter: 'https://twitter.com/p1ckyzz',
@@ -79,8 +77,6 @@ const BLOG = {
     }
   },
   googleAdsenseId: '', 
-  DaoVoiceId: '', // DaoVoice http://dashboard.daovoice.io/get-started
-  TidioId: '', // https://www.tidio.com/
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
 
 }

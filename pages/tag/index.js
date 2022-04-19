@@ -18,9 +18,9 @@ export default function Tag ({ tags, allPosts, categories }) {
   return <BaseLayout meta={meta} categories={categories} totalPosts={allPosts}>
       <div className='shadow animate__animated animate__fadeIn bg-white dark:bg-gray-800 px-10 py-10 shadow'>
         <div className='dark:text-gray-200 mb-5'><FontAwesomeIcon icon={faTags} className='mr-4'/>{locale.COMMON.TAGS}:</div>
-        <div id='tags-list' className='duration-200 flex flex-wrap'>
+        <div id='tags-list' className='flex flex-wrap'>
           { tags.map(tag => {
-            return <div key={tag.name} className='p-2'><TagItem key={tag.name} tag={tag} /></div>
+            return <div key={tag.name} className='p-2 animate__animated animate__fadeIn'><TagItem key={tag.name} tag={tag} /></div>
           }) }
         </div>
       </div>
