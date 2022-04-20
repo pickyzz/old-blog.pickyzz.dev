@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import throttle from 'lodash.throttle'
+import DarkModeButton from '@/components/DarkModeButton'
 
 let windowTop = 0
 
@@ -91,6 +92,12 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
               <a className='hover:scale-105 duration-100 transform'>{locale.NAV.ABOUT}</a>
             </Link>
           </div>
+
+           {/* top theme button */}
+          {BLOG.topThemeButton &&
+          <div className='ml-4 px-2 bg-gray-300 dark:bg-gray-600 border-2 border-gray-400 rounded-xl'>
+            <DarkModeButton/>
+          </div>}
         </div>
       </div>
     </div>

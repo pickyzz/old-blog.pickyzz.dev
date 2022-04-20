@@ -26,6 +26,8 @@ const BLOG = {
   showAbout: true,
   showArchive: true,
   pageHeader: false,
+  topThemeButton: true,
+  sideThemeButton: false,
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og.pickyzz.dev', // The link to generate OG image, don't end with a slash
   seo: {

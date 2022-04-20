@@ -4,7 +4,7 @@ import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { loadUserThemeFromCookies, saveTheme } from '@/lib/theme'
 
-export default function FloatDarkModeButton () {
+const FloatDarkModeButton = () => {
   const [show, switchShow] = useState(false)
   const scrollListener = () => {
     const scrollY = window.pageYOffset
@@ -35,7 +35,7 @@ export default function FloatDarkModeButton () {
       onClick={handleChangeDarkMode}
       className={
         (show ? '' : ' hidden ') +
-        ' animate__animated animate__fadeInRight px-3.5 py-3 animate__animated animate__faster shadow-card fixed right-2 bottom-36 z-10 duration-200 text-xs cursor-pointer rounded-xl' +
+        ' animate__animated animate__fadeInRight px-3.5 py-3 animate__animated animate__faster shadow-card fixed right-2 bottom-12 z-10 duration-200 text-xs cursor-pointer rounded-xl' +
         ' text-black dark:border-gray-500 flex justify-center items-center w-9 h-9 glassmorphism dark:text-gray-200'
       }
     >
@@ -57,3 +57,5 @@ export default function FloatDarkModeButton () {
     </div>
   )
 }
+
+export default FloatDarkModeButton

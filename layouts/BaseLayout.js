@@ -1,3 +1,4 @@
+import BLOG from '@/blog.config'
 import CommonHead from '@/components/CommonHead'
 import CookieAcception from '@/components/cookieConsent'
 import FloatDarkModeButton from '@/components/FloatDarkModeButton'
@@ -74,7 +75,8 @@ const BaseLayout = ({
       <Footer title={meta.title}/>
       <JumpToTopButton targetRef={targetRef} showPercent={false} />
       {/* <JumpToBottomButton targetRef={targetRef} showPercent={false}/> */}
-      <FloatDarkModeButton/>
+
+      {BLOG.sideThemeButton && <FloatDarkModeButton/>}
       <CookieAcception/>
       </>
   )
