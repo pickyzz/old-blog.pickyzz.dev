@@ -17,7 +17,7 @@ const DarkModeButton = () => {
     htmlElement.classList?.add(newTheme)
   }
   return (
-    <div onClick={handleChangeDarkMode} className='flex dark:text-gray-200 z-10 duration-200 text-xs cursor-pointer py-1.5 px-1'>
+    <div onClick={handleChangeDarkMode} className='flex dark:text-gray-200 z-10 duration-200 text-[16px] cursor-pointer py-1.5 px-1'>
     {userTheme === 'dark' && (<>
         <FontAwesomeIcon
           icon={faSun}

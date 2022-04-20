@@ -74,6 +74,13 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
             </Link>
           </div>
 
+          {/* top theme button */}
+          {BLOG.topThemeButton &&
+            <div className='mx-2 px-1 border-l-2 pt-[0.5px] dark:border-gray-600'>
+              <DarkModeButton/>
+            </div>
+          }
+
           {/* top menu */}
           <div className='invisible md:visible mr-1 flex flex-nowrap flex-grow justify-end items-center text-sm space-x-4 font-mono dark:text-gray-200'>
           {/* <Link href='/'>
@@ -92,12 +99,6 @@ const TopNav = ({ tags, currentTag, post, posts, categories, currentCategory, au
               <a className='hover:scale-105 duration-100 transform'>{locale.NAV.ABOUT}</a>
             </Link>
           </div>
-
-           {/* top theme button */}
-          {BLOG.topThemeButton &&
-          <div className='ml-4 px-2 bg-gray-300 dark:bg-gray-600 border-2 border-gray-400 rounded-xl'>
-            <DarkModeButton/>
-          </div>}
         </div>
       </div>
     </div>
