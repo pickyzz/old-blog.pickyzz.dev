@@ -123,7 +123,7 @@ export default function ArticleDetail (props) {
             </header>)}
 
             {post.type[0] === 'Page' && BLOG.pageHeader && (<header className='h-full w-full md:w-auto'>
-              <div className="animate__animated animate__slideInDown animate__slower font-bold text-3xl text-black dark:text-white font-Maitree pt-6 px-4 pt-8 md:px-24 xl:px-36">
+              <div className="animate__animated animate__slideInDown animate__slower font-bold text-3xl text-black dark:text-white font-Maitree px-4 pt-8 md:px-24 xl:px-36">
                 {post.title}
               </div>
             </header>)}
@@ -148,7 +148,7 @@ export default function ArticleDetail (props) {
               )}
             </section>
 
-            <section className="grid justify-items-end text-right md:px-24 xl:px-36 px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
+            {post.type[0] === 'Post' && (<section className="grid justify-items-end text-right md:px-24 xl:px-36 px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
               {/* ads google */}
               {/* <ins className="adsbygoogle"
                 style={{ display: 'block', textAlign: 'center' }}
@@ -160,7 +160,7 @@ export default function ArticleDetail (props) {
                 <div className='pb-1 border-b dark:border-gray-500 border-dashed'>
                   Last edited : {editedTime}
                 </div>
-            </section>
+            </section>)}
 
             {/* 推荐文章 */}
             <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />
