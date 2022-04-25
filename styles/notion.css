@@ -1677,7 +1677,7 @@ pre[class*='language-'] {
   @apply border-blue-400;
 }
 .notion-asset-caption {
-  @apply text-center;
+  @apply text-center text-gray-600 dark:text-gray-400;
 }
 .notion-full-width {
   @apply px-0;
