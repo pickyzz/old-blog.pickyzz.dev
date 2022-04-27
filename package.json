@@ -38,7 +38,7 @@
     "memory-cache": "^0.2.0",
     "next": "^12.1.4",
     "notion-client": "6.12.6",
-    "notion-utils": "6.11.0",
+    "notion-utils": "6.12.6",
     "preact": "^10.5.15",
     "qrcode.react": "^3.0.1",
     "react": "17.0.2",
