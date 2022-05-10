@@ -14,7 +14,7 @@ module.exports = withBundleAnalyzer({
       'images.unsplash.com',
       'i.imgur.com',
       'pbs.twimg.com',
-      'https://og.pickyzz.dev'
+      'og.pickyzz.dev'
     ],
     formats: ['image/avif', 'image/webp']
   },
