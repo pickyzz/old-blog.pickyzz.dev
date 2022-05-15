@@ -66,7 +66,7 @@ const Comment = ({ frontMatter }) => {
             pageId: frontMatter.id,
             pageTitle: frontMatter.title,
             pageUrl: BLOG.link + router.asPath,
-            theme: theme
+            theme
           }}
           lang={BLOG.lang.toLowerCase()}
         />
