@@ -1,16 +1,16 @@
 {
-  "name": "notion-next",
+  "name": "pickyzz-dev",
   "version": "1.0.0",
-  "homepage": "https://github.com/tangly1024/NotionNext.git",
+  "homepage": "https://github.com/pickyzz/pickyzz.dev.git",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tangly1024/NotionNext.git"
+    "url": "https://github.com/pickyzz/pickyzz.dev.git"
   },
   "author": {
-    "name": "tangly",
-    "email": "tlyong1992@hotmail.com",
-    "url": "http://tangly1024.com"
+    "name": "pickyzz",
+    "email": "pikcolokung@mail.com",
+    "url": "http://pickyzz.dev"
   },
   "scripts": {
     "dev": "next dev",
@@ -51,7 +51,8 @@
     "smoothscroll-polyfill": "^0.4.4",
     "static-tweets": "^0.7.2",
     "typed.js": "^2.0.12",
-    "use-ackee": "^3.0.1"
+    "use-ackee": "^3.0.1",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
@@ -70,7 +71,7 @@
     "axios": ">=0.21.1"
   },
   "bugs": {
-    "url": "https://github.com/tangly/NotionNext/issues",
-    "email": "tlyong1992@hotmail.com"
+    "url": "https://github.com/pickyzz/pickyzz.dev/issues",
+    "email": "pikcolokung@gmail.com"
   }
 }
