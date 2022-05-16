@@ -6,19 +6,19 @@ module.exports = withBundleAnalyzer({
     webpack5: true
   },
   images: {
-    domains: 
-    [
+    domains: [
       'gravatar.com',
       'www.notion.so',
       'avatars.githubusercontent.com',
       'images.unsplash.com',
       'i.imgur.com',
       'pbs.twimg.com',
-      'og.pickyzz.dev'
+      'og.pickyzz.dev',
+      'api.lanyard.rest'
     ],
     formats: ['image/avif', 'image/webp']
   },
-  async headers () {
+  async headers() {
     return [
       {
         source: '/:path*{/}?',

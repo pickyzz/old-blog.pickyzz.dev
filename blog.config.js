@@ -8,9 +8,9 @@ const BLOG = {
   home: {
     showHomeBanner: false, // index's banner [true,false]
     homeBannerStrings: ['#StopWar'], // ex. ['Type less think more']
-    homeBannerImage: '/4436554.png', // ex. '/4436554.png' mean file is in public/4436554.png
+    homeBannerImage: '/4436554.png' // ex. '/4436554.png' mean file is in public/4436554.png
   },
-  avatar: './avatar.png',
+  avatar: 'https://api.lanyard.rest/77791675115642880.webp',
   lang: 'en-US', // ['zh-CN','en-US'] default lang => see /lib/lang.js for more.
   notionPageId: process.env.NOTION_PAGE_ID || '', // Important page_id！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
@@ -31,7 +31,57 @@ const BLOG = {
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og.pickyzz.dev', // The link to generate OG image, don't end with a slash
   seo: {
-    keywords: ['Notion', 'pickyzz', 'blog', 'dev', 'javascript', 'typescript', 'vue', 'react', 'nodejs', 'css', 'html', 'sass', 'less', 'git', 'github', 'gitlab', 'git-lab', 'gitlab.com', 'gitlab.io', 'gitlab.io', 'gitlab.com/pickyzz', 'gitlab.io/pickyzz', 'gitlab.com/pickyzz/blog', 'gitlab.io/pickyzz/blog', 'gitlab.com/pickyzz/blog/', 'gitlab.io/pickyzz/blog/', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index.html', 'gitlab.io/pickyzz/blog/index.html', 'gitlab.com/pickyzz/blog/index'],
+    keywords: [
+      'Notion',
+      'pickyzz',
+      'blog',
+      'dev',
+      'javascript',
+      'typescript',
+      'vue',
+      'react',
+      'nodejs',
+      'css',
+      'html',
+      'sass',
+      'less',
+      'git',
+      'github',
+      'gitlab',
+      'git-lab',
+      'gitlab.com',
+      'gitlab.io',
+      'gitlab.io',
+      'gitlab.com/pickyzz',
+      'gitlab.io/pickyzz',
+      'gitlab.com/pickyzz/blog',
+      'gitlab.io/pickyzz/blog',
+      'gitlab.com/pickyzz/blog/',
+      'gitlab.io/pickyzz/blog/',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index.html',
+      'gitlab.io/pickyzz/blog/index.html',
+      'gitlab.com/pickyzz/blog/index'
+    ],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   analytics: {
@@ -44,13 +94,13 @@ const BLOG = {
     gaConfig: {
       measurementId: 'G-F0LYXZGWQ6' // e.g: G-XXXXXXXXXX
     },
-    busuanzi: false, // see http://busuanzi.ibruce.info/
+    busuanzi: false // see http://busuanzi.ibruce.info/
   },
   socialLink: {
     twitter: 'https://twitter.com/p1ckyzz',
     github: 'https://github.com/pickyzz',
     telegram: '',
-    twitch: '',
+    twitch: ''
   },
   comment: {
     // support provider: gitalk, utterances, cusdis, giscus
@@ -71,16 +121,16 @@ const BLOG = {
     utterancesConfig: {
       repo: 'pickyzz/pickyzz-blog-comment'
     },
-    GiscusConfig: { // อันนี้ไม่มีบั๊กเรื่อง theme
+    GiscusConfig: {
+      // อันนี้ไม่มีบั๊กเรื่อง theme
       repo: 'pickyzz/pickyzz-blog-comment',
       repoID: 'R_kgDOGJv8GA',
       category: 'General', // Announcements, General, Ideas, Q&A, Show and tell
       categoryID: 'DIC_kwDOGJv8GM4CAgb8'
     }
   },
-  googleAdsenseId: '', 
+  googleAdsenseId: '',
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
-
 }
 // export default BLOG
 module.exports = BLOG
