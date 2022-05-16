@@ -17,7 +17,9 @@
     "build": "next build",
     "start": "next start",
     "post-build": "next-sitemap --config next-sitemap.config.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "lint:write": "next lint --cache --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
@@ -65,6 +67,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "next-sitemap": "^2.5.19",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
@@ -75,5 +79,8 @@
   "bugs": {
     "url": "https://github.com/pickyzz/pickyzz.dev/issues",
     "email": "pikcolokung@gmail.com"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   }
 }
