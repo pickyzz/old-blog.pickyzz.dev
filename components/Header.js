@@ -9,11 +9,7 @@ import Typed from 'typed.js'
 // let windowTop = 0
 // let autoScroll = false
 
-/**
- *
- * @returns 头图
- */
-export default function Header () {
+export default function Header() {
   const [typed, changeType] = useState()
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   useEffect(() => {
@@ -106,12 +102,11 @@ export default function Header () {
       id="header"
       className="animate__animated animate__fadeIn duration-500 md:bg-scroll w-full bg-cover bg-center h-72 bg-black"
       style={{
-        backgroundImage:
-          `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${url}${BLOG.home.homeBannerImage}")`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8) ),url("${url}${BLOG.home.homeBannerImage}")`
       }}
     >
       <div className="absolute flex h-80 items-center lg:-mt-6 justify-center w-full text-2xl md:text-5xl text-white">
-        <div id='typed' className='flex text-center font-Firacode'/>
+        <div id="typed" className="flex text-center font-Firacode" />
       </div>
 
       {/* scroll button */}
@@ -123,7 +118,6 @@ export default function Header () {
       >
         <FontAwesomeIcon icon={faAngleDown} className='animate-bounce'/>
       </div> */}
-
     </header>
   )
 }

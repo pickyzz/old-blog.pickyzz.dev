@@ -1,24 +1,16 @@
 import LatestPostsGroup from '@/components/LatestPostsGroup'
 // import TagGroups from '@/components/TagGroups'
 import { useGlobal } from '@/lib/global'
-import { faAngleDoubleRight, faHistory, faThList } from '@fortawesome/free-solid-svg-icons'
+import {
+  faAngleDoubleRight,
+  faHistory,
+  faThList
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
 import CategoryGroup from '@/components/CategoryGroup'
 
-/**
- * 侧边平铺
- * @param tags
- * @param currentTag
- * @param post
- * @param posts
- * @param categories
- * @param currentCategory
- * @param currentSearch
- * @returns {JSX.Element}
- * @constructor
- */
 const SideAreaRight = ({
   title,
   tags,
@@ -36,12 +28,11 @@ const SideAreaRight = ({
 
   return (
     <>
-
       {/* <section className='hidden lg:block mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200 py-8 '>
         <InfoCard postCount={postCount} />
       </section> */}
 
-      {/* 菜单 */}
+      {/* menu */}
       {/* <section className='hidden lg:block mb-5 py-5  bg-white dark:bg-gray-800  hover:shadow-xl duration-200'>
         <MenuButtonGroup allowCollapse={true} />
         <div className='px-5 pt-2'>
@@ -50,8 +41,8 @@ const SideAreaRight = ({
       </section> */}
 
       {/* <section className="shadow mb-5 py-4 px-2 bg-white dark:bg-gray-800 hover:shadow-xl duration-200"> */}
-        {/* 展示广告  */}
-        {/* <ins
+      {/* display ads  */}
+      {/* <ins
           className="adsbygoogle"
           style={{ display: 'block' }}
           data-adtest="on"
@@ -87,18 +78,25 @@ const SideAreaRight = ({
           </section>
         )}
 
-        {/* 分类  */}
+        {/* Classification  */}
         {categories && (
-          <section className='shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200'>
-            <div className='text-md px-5 mb-2 flex flex-nowrap justify-between font-normal'>
-              <div className='pb-1 text-gray-600  dark:text-gray-300'><FontAwesomeIcon icon={faThList} className='mr-2' />{locale.COMMON.CATEGORY}</div>
-              <Link href='/category' passHref>
-                <a className='text-gray-400 text-sm mt-1 hover:text-black dark:text-gray-400 dark:hover:text-white hover:underline cursor-pointer'>
-                  {locale.COMMON.MORE} <FontAwesomeIcon icon={faAngleDoubleRight} />
+          <section className="shadow py-4 mb-5 bg-white dark:bg-gray-800 hover:shadow-xl duration-200">
+            <div className="text-md px-5 mb-2 flex flex-nowrap justify-between font-normal">
+              <div className="pb-1 text-gray-600  dark:text-gray-300">
+                <FontAwesomeIcon icon={faThList} className="mr-2" />
+                {locale.COMMON.CATEGORY}
+              </div>
+              <Link href="/category" passHref>
+                <a className="text-gray-400 text-sm mt-1 hover:text-black dark:text-gray-400 dark:hover:text-white hover:underline cursor-pointer">
+                  {locale.COMMON.MORE}{' '}
+                  <FontAwesomeIcon icon={faAngleDoubleRight} />
                 </a>
               </Link>
             </div>
-            <CategoryGroup currentCategory={currentCategory} categories={categories} />
+            <CategoryGroup
+              currentCategory={currentCategory}
+              categories={categories}
+            />
           </section>
         )}
 
@@ -126,7 +124,6 @@ const SideAreaRight = ({
             </div>
           </section>
         )} */}
-
       </div>
     </>
   )

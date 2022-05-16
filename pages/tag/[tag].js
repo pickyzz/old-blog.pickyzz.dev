@@ -7,7 +7,13 @@ import BlogPostListScroll from '@/components/BlogPostListScroll'
 import { getNotionPageData } from '@/lib/notion/getNotionData'
 import { useGlobal } from '@/lib/global'
 
-export default function Tag ({ tags, allPosts, filteredPosts, tag, categories }) {
+export default function Tag({
+  tags,
+  allPosts,
+  filteredPosts,
+  tag,
+  categories
+}) {
   const { locale } = useGlobal()
 
   const meta = {
@@ -16,22 +22,34 @@ export default function Tag ({ tags, allPosts, filteredPosts, tag, categories })
     type: 'website'
   }
 
-  // 将当前选中的标签置顶🔝
+  // Pin the currently selected tab to the top 🔝
   // if (!tags) tags = []
   // const currentTag = tags?.find(r => r?.name === tag)
   // const newTags = currentTag ? [currentTag].concat(tags.filter(r => r?.name !== tag)) : tags.filter(r => r?.name !== tag)
 
-  return <BaseLayout meta={meta} tags={tags} currentTag={tag} categories={categories} totalPosts={allPosts}>
+  return (
+    <BaseLayout
+      meta={meta}
+      tags={tags}
+      currentTag={tag}
+      categories={categories}
+      totalPosts={allPosts}
+    >
       {/* <StickyBar>
           <TagList tags={newTags} currentTag={tag}/>
       </StickyBar> */}
-      <div className='md:mt-0'>
-        <BlogPostListScroll posts={filteredPosts} tags={tags} currentTag={tag}/>
+      <div className="md:mt-0">
+        <BlogPostListScroll
+          posts={filteredPosts}
+          tags={tags}
+          currentTag={tag}
+        />
       </div>
-  </BaseLayout>
+    </BaseLayout>
+  )
 }
 
-export async function getStaticProps ({ params }) {
+export async function getStaticProps({ params }) {
   const tag = params.tag
   const from = 'tag-props'
   const notionPageData = await getNotionPageData({ from })
@@ -59,7 +77,7 @@ export async function getStaticProps ({ params }) {
  * @param {*}} allPosts
  * @returns
  */
-function getTagNames (allPosts) {
+function getTagNames(allPosts) {
   const tags = allPosts.map(p => p.tags).flat()
 
   const tagObj = {}
@@ -73,7 +91,7 @@ function getTagNames (allPosts) {
   return tagObj
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   const from = 'tag-static-path'
   const posts = await getAllPosts({ from })
   const tagNames = getTagNames(posts)

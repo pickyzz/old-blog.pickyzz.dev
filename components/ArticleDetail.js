@@ -32,57 +32,75 @@ import { Tweet } from 'react-static-tweets'
 import ArticleCopyright from './ArticleCopyright'
 import WordCount from './WordCount'
 
-/**
- *
- * @param {*} param0
- * @returns
- */
-export default function ArticleDetail (props) {
+export default function ArticleDetail(props) {
   const { post, blockMap, recommendPosts, prev, next } = props
   const drawerRight = useRef(null)
   const targetRef = useRef(null)
   const url = BLOG.link + useRouter().asPath
   const { locale } = useGlobal()
-  const date = formatDate(post?.date?.start_date || post.createdTime, locale.LOCALE)
-  const editedTime = formatDate(post?.lastEditedTime || post.createdTime, locale.LOCALE)
+  const date = formatDate(
+    post?.date?.start_date || post.createdTime,
+    locale.LOCALE
+  )
+  const editedTime = formatDate(
+    post?.lastEditedTime || post.createdTime,
+    locale.LOCALE
+  )
 
-  const zoom = typeof window !== 'undefined' && mediumZoom({
-    container: '.notion-viewport',
-    background: 'rgba(0, 0, 0, 0.2)',
-    margin: getMediumZoomMargin()
-  })
+  const zoom =
+    typeof window !== 'undefined' &&
+    mediumZoom({
+      container: '.notion-viewport',
+      background: 'rgba(0, 0, 0, 0.2)',
+      margin: getMediumZoomMargin()
+    })
   const zoomRef = useRef(zoom ? zoom.clone() : null)
 
   useEffect(() => {
     // Add all images under all containers to medium-zoom
     const container = document.getElementById('container')
     const imgList = container.getElementsByTagName('img')
-    if (imgList && zoomRef.current && !post?.page_cover && !post.type.includes('Page')) {
+    if (
+      imgList &&
+      zoomRef.current &&
+      !post?.page_cover &&
+      !post.type.includes('Page')
+    ) {
       for (let i = 0; i < imgList.length; i++) {
-        (zoomRef.current).attach(imgList[i])
+        zoomRef.current.attach(imgList[i])
       }
     }
   })
 
-  return (<>
-      <div id="container" ref={targetRef} className="shadow animate__animated animate__fadeIn md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
-          <article itemScope itemType="https://schema.org/Movie"
-            className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-0 md:px-0 xl:px-0 dark:border-gray-700 bg-white dark:bg-gray-800"
-          >
-
-            {post.type[0] === 'Post' && (<header
-              className='h-full w-full md:w-auto overflow-hidden py-10 px-4 bg-cover bg-center'
+  return (
+    <>
+      <div
+        id="container"
+        ref={targetRef}
+        className="shadow animate__animated animate__fadeIn md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full "
+      >
+        <article
+          itemScope
+          itemType="https://schema.org/Movie"
+          className="shadow md:hover:shadow-2xl duration-300 subpixel-antialiased py-10 px-5 lg:pt-0 md:px-0 xl:px-0 dark:border-gray-700 bg-white dark:bg-gray-800"
+        >
+          {post.type[0] === 'Post' && (
+            <header
+              className="h-full w-full md:w-auto overflow-hidden py-10 px-4 bg-cover bg-center"
               style={{
-                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6) ),url(${post.page_cover || post.cover})`
+                backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6) ),url(${
+                  post.page_cover || post.cover
+                })`
               }}
             >
-
-              {post.type[0] === 'Post' && (<>
-                {/* 文章Title */}
-                <div className="animate__animated animate__slideInDown font-bold text-center text-3xl text-white dark:text-white font-Maitree pt-6">
+              {post.type[0] === 'Post' && (
+                <>
+                  {/* Article Title */}
+                  <div className="animate__animated animate__slideInDown font-bold text-center text-3xl text-white dark:text-white font-Maitree pt-6">
                     {post.title}
-                </div>
-              </>)}
+                  </div>
+                </>
+              )}
 
               {post.type && !post.type.includes('Page') && (
                 <section className="animate__animated animate__slideInDown flex-wrap flex justify-center mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
@@ -93,62 +111,73 @@ export default function ArticleDetail (props) {
                         {post.category}
                       </a>
                     </Link>
-                    <span className='mr-2'>|</span>
+                    <span className="mr-2">|</span>
 
-                    {post.type[0] !== 'Page' && (<>
-                      <Link
-                        href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
-                        passHref
-                      >
-                        <a className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
-                          {date}
-                        </a>
-                      </Link>
-                      <span className='mr-2'>|</span>
-                    </>)}
+                    {post.type[0] !== 'Page' && (
+                      <>
+                        <Link
+                          href={`/archive#${post?.date?.start_date?.substr(
+                            0,
+                            7
+                          )}`}
+                          passHref
+                        >
+                          <a className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
+                            {date}
+                          </a>
+                        </Link>
+                        <span className="mr-2">|</span>
+                      </>
+                    )}
 
                     <div className="hidden busuanzi_container_page_pv font-light mr-2">
-                      <FontAwesomeIcon icon={faEye} className='mr-1'/>
+                      <FontAwesomeIcon icon={faEye} className="mr-1" />
                       &nbsp;
-                      <span className="mr-2 busuanzi_value_page_pv"
-                      ></span>
-                      <span className='mr-2'>|</span>
+                      <span className="mr-2 busuanzi_value_page_pv"></span>
+                      <span className="mr-2">|</span>
                     </div>
                   </div>
-                  <div className='flex flex-nowrap whitespace-nowrap items-center font-light text-md'>
-                    <WordCount/>
+                  <div className="flex flex-nowrap whitespace-nowrap items-center font-light text-md">
+                    <WordCount />
                   </div>
                 </section>
               )}
-            </header>)}
+            </header>
+          )}
 
-            {post.type[0] === 'Page' && BLOG.pageHeader && (<header className='h-full w-full md:w-auto'>
+          {post.type[0] === 'Page' && BLOG.pageHeader && (
+            <header className="h-full w-full md:w-auto">
               <div className="animate__animated animate__slideInDown animate__slower font-bold text-3xl text-black dark:text-white font-Maitree px-4 pt-8 md:px-24 xl:px-36">
                 {post.title}
               </div>
-            </header>)}
+            </header>
+          )}
 
-            {/* Notion文章主体 */}
-            <section id='notion-article' className='animate__animated animate__fadeIn px-1 pt-8 md:px-24 xl:px-36'>
-              {blockMap && (
-                <NotionRenderer
-                  recordMap={blockMap}
-                  mapPageUrl={mapPageUrl}
-                  components={{
-                    nextImage: Image,
-                    nextLink: Link,
-                    Code,
-                    Collection,
-                    Equation,
-                    Pdf,
-                    Tweet,
-                    Modal
-                  }}
-                />
-              )}
-            </section>
+          {/* Notion article body */}
+          <section
+            id="notion-article"
+            className="animate__animated animate__fadeIn px-1 pt-8 md:px-24 xl:px-36"
+          >
+            {blockMap && (
+              <NotionRenderer
+                recordMap={blockMap}
+                mapPageUrl={mapPageUrl}
+                components={{
+                  nextImage: Image,
+                  nextLink: Link,
+                  Code,
+                  Collection,
+                  Equation,
+                  Pdf,
+                  Tweet,
+                  Modal
+                }}
+              />
+            )}
+          </section>
 
-            {post.type[0] === 'Post' && (<section className="grid justify-items-end text-right md:px-24 xl:px-36 px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
+          {post.type[0] === 'Post' && (
+            <section className="grid justify-items-end text-right md:px-24 xl:px-36 px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600 dark:text-gray-400">
               {/* ads google */}
               {/* <ins className="adsbygoogle"
                 style={{ display: 'block', textAlign: 'center' }}
@@ -157,59 +186,62 @@ export default function ArticleDetail (props) {
                 data-ad-format="fluid"
                 data-ad-client=""
                 data-ad-slot=""></ins> */}
-                <div className='pb-1 border-b dark:border-gray-500 border-dashed'>
-                  Last edited : {editedTime}
-                </div>
-            </section>)}
-
-            {/* 推荐文章 */}
-            <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />
-
-            {/* 版权声明 */}
-            <ArticleCopyright author={BLOG.author} url={url} />
-
-            {/* 标签列表 */}
-            <section className="md:flex md:justify-between md:px-24 xl:px-32">
-              {post.tagItems && !post.type.includes('Page') && (
-                <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
-                  <div className="hidden md:block dark:text-gray-300 whitespace-nowrap">
-                    {locale.COMMON.TAGS}：
-                  </div>
-                  {post.tagItems.map(tag => (
-                    <TagItem key={tag.name} tag={tag} />
-                  ))}
-                </div>
-              )}
-              <div>
-                <ShareBar post={post} />
+              <div className="pb-1 border-b dark:border-gray-500 border-dashed">
+                Last edited : {editedTime}
               </div>
             </section>
+          )}
 
-            <BlogAround prev={prev} next={next} />
+          {/* recommended article */}
+          <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />
 
-            {/* comment */}
-            {post.type && !post.type.includes('Page') && (
-                <Comment frontMatter={post} />
+          {/* Copyright Notice */}
+          <ArticleCopyright author={BLOG.author} url={url} />
+
+          {/* list of tags */}
+          <section className="md:flex md:justify-between md:px-24 xl:px-32">
+            {post.tagItems && !post.type.includes('Page') && (
+              <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
+                <div className="hidden md:block dark:text-gray-300 whitespace-nowrap">
+                  {locale.COMMON.TAGS}：
+                </div>
+                {post.tagItems.map(tag => (
+                  <TagItem key={tag.name} tag={tag} />
+                ))}
+              </div>
             )}
+            <div>
+              <ShareBar post={post} />
+            </div>
+          </section>
 
-          </article>
+          <BlogAround prev={prev} next={next} />
 
+          {/* comment */}
+          {post.type && !post.type.includes('Page') && (
+            <Comment frontMatter={post} />
+          )}
+        </article>
       </div>
 
-      {/* 悬浮目录按钮 */}
+      {/* Floating directory button */}
       <div className="block lg:hidden">
-        <TocDrawerButton onClick={() => { drawerRight.current.handleSwitchVisible() }} />
+        <TocDrawerButton
+          onClick={() => {
+            drawerRight.current.handleSwitchVisible()
+          }}
+        />
         <TocDrawer post={post} cRef={drawerRight} targetRef={targetRef} />
       </div>
-
-    </>)
+    </>
+  )
 }
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 
-function getMediumZoomMargin () {
+function getMediumZoomMargin() {
   const width = window.innerWidth
 
   if (width < 500) {

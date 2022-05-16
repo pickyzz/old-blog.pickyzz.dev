@@ -6,7 +6,7 @@ import React, { useEffect } from 'react'
 import { useGlobal } from '@/lib/global'
 import BlogPostArchive from '@/components/BlogPostArchive'
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const from = 'index'
   const notionPageData = await getNotionPageData({ from })
   const allPosts = await getAllPosts({ notionPageData, from })
@@ -25,10 +25,10 @@ export async function getStaticProps () {
 
 const Index = ({ allPosts, tags, categories }) => {
   const { locale } = useGlobal()
-  // 深拷贝
+  // deep copy
   const postsSortByDate = Object.create(allPosts)
 
-  // 时间排序
+  // chronological order
   postsSortByDate.sort((a, b) => {
     const dateA = new Date(a?.date.start_date || a.createdTime)
     const dateB = new Date(b?.date.start_date || b.createdTime)
@@ -41,7 +41,7 @@ const Index = ({ allPosts, tags, categories }) => {
     type: 'website'
   }
 
-  const archivePosts = { }
+  const archivePosts = {}
 
   postsSortByDate.forEach(post => {
     const date = post.date.start_date.slice(0, 7)
@@ -52,28 +52,31 @@ const Index = ({ allPosts, tags, categories }) => {
     }
   })
 
-  useEffect(
-    () => {
-      if (window) {
-        const anchor = window.location.hash
-        if (anchor) {
-          setTimeout(() => {
-            const anchorElement = document.getElementById(anchor.substring(1))
-            if (anchorElement) { anchorElement.scrollIntoView({ block: 'start', behavior: 'smooth' }) }
-          }, 300)
-        }
+  useEffect(() => {
+    if (window) {
+      const anchor = window.location.hash
+      if (anchor) {
+        setTimeout(() => {
+          const anchorElement = document.getElementById(anchor.substring(1))
+          if (anchorElement) {
+            anchorElement.scrollIntoView({ block: 'start', behavior: 'smooth' })
+          }
+        }, 300)
       }
-    },
-    []
-  )
+    }
+  }, [])
 
   return (
     <BaseLayout meta={meta} tags={tags} categories={categories}>
-        <div className='animate__animated animate__fadeIn mb-10 pb-20 bg-white md:p-12 p-3 dark:bg-gray-800 shadow-md min-h-full'>
-          {Object.keys(archivePosts).map(archiveTitle => (
-             <BlogPostArchive key={archiveTitle} posts={archivePosts[archiveTitle]} archiveTitle={archiveTitle}/>
-          ))}
-        </div>
+      <div className="animate__animated animate__fadeIn mb-10 pb-20 bg-white md:p-12 p-3 dark:bg-gray-800 shadow-md min-h-full">
+        {Object.keys(archivePosts).map(archiveTitle => (
+          <BlogPostArchive
+            key={archiveTitle}
+            posts={archivePosts[archiveTitle]}
+            archiveTitle={archiveTitle}
+          />
+        ))}
+      </div>
     </BaseLayout>
   )
 }

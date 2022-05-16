@@ -1,7 +1,12 @@
 import ArticleDetail from '@/components/ArticleDetail'
 import BaseLayout from '@/layouts/BaseLayout'
 import { useGlobal } from '@/lib/global'
-import { getAllCategories, getAllPosts, getAllTags, getPostBlocks } from '@/lib/notion'
+import {
+  getAllCategories,
+  getAllPosts,
+  getAllTags,
+  getPostBlocks
+} from '@/lib/notion'
 import { getNotionPageData } from '@/lib/notion/getNotionData'
 import Custom404 from '@/pages/404'
 import { getPageTableOfContents } from 'notion-utils'
@@ -14,11 +19,6 @@ import 'prismjs/components/prism-typescript'
 import React from 'react'
 import BLOG from '@/blog.config'
 
-/**
- * 关于页面，默认取notion中slug为about的文章
- * @param {*} param0
- * @returns
- */
 const About = ({ post, blockMap, tags, prev, next, allPosts, categories }) => {
   if (!post) {
     return <Custom404 />
@@ -32,12 +32,20 @@ const About = ({ post, blockMap, tags, prev, next, allPosts, categories }) => {
     tags: []
   }
 
-  return <BaseLayout meta={meta} tags={tags} post={post} totalPosts={allPosts} categories={categories}>
-      <ArticleDetail post={post} blockMap={blockMap} allPosts={allPosts}/>
-  </BaseLayout>
+  return (
+    <BaseLayout
+      meta={meta}
+      tags={tags}
+      post={post}
+      totalPosts={allPosts}
+      categories={categories}
+    >
+      <ArticleDetail post={post} blockMap={blockMap} allPosts={allPosts} />
+    </BaseLayout>
+  )
 }
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const from = 'about-props'
   const notionPageData = await getNotionPageData({ from })
   let allPosts = await getAllPosts({ notionPageData, from, includePage: true })

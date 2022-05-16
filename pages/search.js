@@ -9,7 +9,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { getNotionPageData } from '@/lib/notion/getNotionData'
 import { useGlobal } from '@/lib/global'
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const from = 'search-props'
   const notionPageData = await getNotionPageData({ from })
   const allPosts = await getAllPosts({ notionPageData, from })
@@ -28,7 +28,7 @@ export async function getStaticProps () {
 }
 
 const Search = ({ allPosts, tags, categories }) => {
-  // 处理查询过滤 支持标签、关键词过滤
+  // Process query filtering Support label and keyword filtering
   let filteredPosts = []
   const searchKey = getSearchKey()
   if (searchKey) {
@@ -45,18 +45,31 @@ const Search = ({ allPosts, tags, categories }) => {
     type: 'website'
   }
   return (
-    <BaseLayout meta={meta} tags={tags} totalPosts={allPosts} currentSearch={searchKey} categories={categories}>
-        <StickyBar>
-          <div className='p-4 dark:text-gray-200'><FontAwesomeIcon icon={faSearch} className='mr-1'/> {locale.NAV.SEARCH}： {searchKey}</div>
-        </StickyBar>
-        <div className='md:mt-5'>
-         <BlogPostListScroll posts={filteredPosts} tags={tags} currentSearch={searchKey} />
+    <BaseLayout
+      meta={meta}
+      tags={tags}
+      totalPosts={allPosts}
+      currentSearch={searchKey}
+      categories={categories}
+    >
+      <StickyBar>
+        <div className="p-4 dark:text-gray-200">
+          <FontAwesomeIcon icon={faSearch} className="mr-1" />{' '}
+          {locale.NAV.SEARCH}： {searchKey}
         </div>
+      </StickyBar>
+      <div className="md:mt-5">
+        <BlogPostListScroll
+          posts={filteredPosts}
+          tags={tags}
+          currentSearch={searchKey}
+        />
+      </div>
     </BaseLayout>
   )
 }
 
-export function getSearchKey () {
+export function getSearchKey() {
   const router = useRouter()
   if (router.query && router.query.s) {
     return router.query.s

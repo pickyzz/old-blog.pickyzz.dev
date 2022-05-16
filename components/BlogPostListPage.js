@@ -5,18 +5,10 @@ import BLOG from '@/blog.config'
 import { useRouter } from 'next/router'
 import BlogPostListEmpty from '@/components/BlogPostListEmpty'
 
-/**
- * 文章列表分页表格
- * @param page 当前页
- * @param posts 所有文章
- * @param tags 所有标签
- * @returns {JSX.Element}
- * @constructor
- */
 const BlogPostListPage = ({ page = 1, posts = [] }) => {
   let filteredBlogPosts = posts
 
-  // 处理查询过滤 支持标签、关键词过滤
+  // Process query filtering Support label and keyword filtering
   let currentSearch = ''
   const router = useRouter()
   if (router.query && router.query.s) {
@@ -28,7 +20,7 @@ const BlogPostListPage = ({ page = 1, posts = [] }) => {
     })
   }
 
-  // 处理分页
+  // Handling pagination
   const totalPage = Math.ceil(filteredBlogPosts.length / BLOG.postsPerPage)
   const postsToShow = filteredBlogPosts.slice(
     BLOG.postsPerPage * (page - 1),
@@ -44,15 +36,19 @@ const BlogPostListPage = ({ page = 1, posts = [] }) => {
     return <BlogPostListEmpty />
   } else {
     return (
-      <div id="container" className='mt-10 md:mt-0'>
-        {/* 文章列表 */}
+      <div id="container" className="mt-10 md:mt-0">
+        {/* Article list */}
         <div className="flex flex-wrap space-y-8 mx-5 md:mx-0">
           {postsToShow.map(post => (
             <BlogPostCard key={post.id} post={post} />
           ))}
         </div>
 
-        <PaginationNumber page={page} showNext={showNext} totalPage={totalPage} />
+        <PaginationNumber
+          page={page}
+          showNext={showNext}
+          totalPage={totalPage}
+        />
       </div>
     )
   }

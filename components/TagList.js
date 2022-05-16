@@ -1,12 +1,6 @@
 // import React from 'react'
 // import TagItem from '@/components/TagItem'
-// /**
-//  * 横向的标签列表
-//  * @param tags
-//  * @param currentTag
-//  * @returns {JSX.Element}
-//  * @constructor
-//  */
+
 // const TagList = ({ tags, currentTag }) => {
 //   if (!tags) {
 //     return null

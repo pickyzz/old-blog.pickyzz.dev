@@ -4,20 +4,12 @@
 // import React, { useEffect, useState } from 'react'
 // import smoothscroll from 'smoothscroll-polyfill'
 
-// /**
-//  * 跳转到网页顶部
-//  * 当屏幕下滑500像素后会出现该控件
-//  * @param targetRef 关联高度的目标html标签
-//  * @param showPercent 是否显示百分比
-//  * @returns {JSX.Element}
-//  * @constructor
-//  */
 // const JumpToBottomButton = ({ targetRef, showPercent = false }) => {
 //   const { locale } = useGlobal()
 //   const [show, switchShow] = useState(false)
 //   const [percent, changePercent] = useState(0)
 //   const scrollListener = () => {
-//     // 处理是否显示回到顶部按钮
+//     // Handle whether to display the back to top button
 //     const clientHeight = targetRef ? (targetRef.current ? targetRef.current.clientHeight : 0) : 0
 //     const scrollY = window.pageYOffset
 //     const fullHeight = clientHeight - window.outerHeight

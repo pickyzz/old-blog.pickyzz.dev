@@ -2,13 +2,6 @@ import BLOG from '@/blog.config'
 import { useEffect } from 'react'
 import { loadUserThemeFromCookies } from '@/lib/theme'
 
-/**
- * ระบบคอมเม้น
- * @param pathname
- * @param layout
- * @returns {JSX.Element}
- * @constructor
- */
 const Giscus = ({ pathname, layout }) => {
   useEffect(() => {
     const theme = loadUserThemeFromCookies()
@@ -18,7 +11,10 @@ const Giscus = ({ pathname, layout }) => {
     script.setAttribute('data-repo', BLOG.comment.GiscusConfig.repo)
     script.setAttribute('data-repo-id', BLOG.comment.GiscusConfig.repoID)
     script.setAttribute('data-category', BLOG.comment.GiscusConfig.category)
-    script.setAttribute('data-category-id', BLOG.comment.GiscusConfig.categoryID)
+    script.setAttribute(
+      'data-category-id',
+      BLOG.comment.GiscusConfig.categoryID
+    )
     script.setAttribute('data-mapping', pathname)
     script.setAttribute('data-reactions-enabled', 1)
     script.setAttribute('data-emit-metadata', 0)
@@ -36,8 +32,7 @@ const Giscus = ({ pathname, layout }) => {
       <div
         id="comments"
         className={layout && layout === 'fullWidth' ? '' : 'md:-ml-18'}
-      >
-      </div>
+      ></div>
     </>
   )
 }
