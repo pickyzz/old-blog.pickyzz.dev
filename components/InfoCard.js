@@ -1,9 +1,9 @@
 import BLOG from '@/blog.config'
-import Image from 'next/image'
 import Router from 'next/router'
 import React from 'react'
 import SocialButton from './SocialButton'
-import DiscordData from '@/lib/discordData'
+import GetDiscordStatus from '@/lib/discord/DiscordStatus'
+import GetDiscordAvatar from '@/lib/discord/DiscordAvatar'
 
 const InfoCard = ({ postCount }) => {
   return (
@@ -16,17 +16,10 @@ const InfoCard = ({ postCount }) => {
             Router.push('/about')
           }}
         >
-          <Image
-            alt={BLOG.title}
-            width={120}
-            height={120}
-            loading="lazy"
-            src={BLOG.avatar}
-            className="rounded-full"
-          />
+          <GetDiscordAvatar />
           <div className="-mt-[20%] text-center">
             <div className="absolute top-29 right-4">
-              <DiscordData />
+              <GetDiscordStatus />
             </div>
           </div>
         </div>

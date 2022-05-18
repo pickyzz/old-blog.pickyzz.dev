@@ -14,7 +14,8 @@ module.exports = withBundleAnalyzer({
       'i.imgur.com',
       'pbs.twimg.com',
       'og.pickyzz.dev',
-      'api.lanyard.rest'
+      'api.lanyard.rest',
+      'cdn.discordapp.com'
     ],
     formats: ['image/avif', 'image/webp']
   },
