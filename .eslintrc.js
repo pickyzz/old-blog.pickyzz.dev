@@ -25,8 +25,7 @@ module.exports = {
   },
   rules: {
     'react/prop-types': 'off',
-    'space-before-function-paren': 0,
-    'react/display-name': [1, { 'ignoreTranspilerName': false }]
+    'space-before-function-paren': 0
   },
   globals: {
     React: true
