@@ -26,7 +26,7 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'space-before-function-paren': 0,
-    'react/display-name': [2, { 'ignoreTranspilerName': true }]
+    'react/display-name': [1, { 'ignoreTranspilerName': false }]
   },
   globals: {
     React: true
