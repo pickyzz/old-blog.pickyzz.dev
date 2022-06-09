@@ -52,7 +52,7 @@
     "react-notion-x": "6.12.10",
     "react-static-tweets": "^0.7.2",
     "smoothscroll-polyfill": "^0.4.4",
-    "static-tweets": "^0.7.2",
+    "static-tweets": "^0.8.0",
     "typed.js": "^2.0.12",
     "use-ackee": "^3.0.1",
     "use-lanyard": "^1.1.0",
