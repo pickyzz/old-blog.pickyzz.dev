@@ -108,7 +108,7 @@
   resolved "https://registry.npmjs.org/@matejmazur/react-katex/-/react-katex-3.1.3.tgz"
   integrity sha512-rBp7mJ9An7ktNoU653BWOYdO4FoR4YNwofHZi+vaytX/nWbIlmHVIF+X8VFOn6c3WYmrLT5FFBjKqCZ1sjR5uQ==
 
-"@next/bundle-analyzer@^12.2.0":
+"@next/bundle-analyzer@12.2.0":
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-12.2.0.tgz#8abe89e23c6a9bf5afba3a15ee4d5f432d3db3b9"
   integrity sha512-Ac+lPLMUW2TBjUi29CwQQu8ay74+mjFoSiI4O3ZlnBVD0xOeQPKwPca/9T9ScO/6/Axx4+B+42eEr2UtgNXeiw==
@@ -1587,7 +1587,7 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-next@^12.2.0:
+eslint-config-next@12.2.0:
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.2.0.tgz#f7e965ca616ebd948d728905c58a1c80aabb36b9"
   integrity sha512-QWzNegadFXjQ0h3hixnLacRM9Kot85vQefyNsA8IeOnERZMz0Gvays1W6DMCjSxJbnCwuWaMXj9DCpar5IahRA==
@@ -3037,7 +3037,7 @@ next-sitemap@^3.1.10:
     "@corex/deepmerge" "^4.0.29"
     minimist "^1.2.6"
 
-next@^12.2.0:
+next@12.2.0:
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/next/-/next-12.2.0.tgz#aef47cd96b602bc1307d1dcf9a1ee3e753845544"
   integrity sha512-B4j7D3SHYopLYx6/Ark0fenwIar9tEaZZFAaxmKjgcMMexhVJzB3jt7X+6wcdXPPMeUD6r09weUtnDpjox/vIA==
@@ -3098,10 +3098,10 @@ normalize-url@^7.0.3:
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-7.0.3.tgz"
   integrity sha512-RiCOdwdPnzvwcBFJE4iI1ss3dMVRIrEzFpn8ftje6iBfzBInqlnRrNhxcLwBEKjPPXQKzm1Ptlxtaiv9wdcj5w==
 
-notion-client@6.12.9:
-  version "6.12.9"
-  resolved "https://registry.npmjs.org/notion-client/-/notion-client-6.12.9.tgz"
-  integrity sha512-bF1YKk76pxyynQ+Nni23K5HH1CTtZYsiEpuBvJfQAd3bEXGaqUri9StmdWLMob7+6rP57D6dgFQpI/SdGZ/jfw==
+notion-client@6.12.11:
+  version "6.12.11"
+  resolved "https://registry.yarnpkg.com/notion-client/-/notion-client-6.12.11.tgz#1506a154481e861d5a79d939bdc1aec04d191901"
+  integrity sha512-FyddYiighSFTBHErK+ZFRml9JEVuEz43bfMBfmKztxYuPuYQGCFj/38zHyCbDcQYLK7XCDXAlmh6JpF+n9QiKw==
   dependencies:
     got "^11.8.1"
     notion-types "^6.12.6"
@@ -3412,13 +3412,13 @@ postcss-js@^4.0.0:
   dependencies:
     camelcase-css "^2.0.1"
 
-postcss-load-config@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-4.0.1.tgz#152383f481c2758274404e4962743191d73875bd"
-  integrity sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==
+postcss-load-config@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-3.1.4.tgz#1ab2571faf84bb078877e1d07905eabe9ebda855"
+  integrity sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==
   dependencies:
     lilconfig "^2.0.5"
-    yaml "^2.1.1"
+    yaml "^1.10.2"
 
 postcss-nested@5.0.6:
   version "5.0.6"
@@ -3486,10 +3486,10 @@ preact@8.1.0:
   resolved "https://registry.npmjs.org/preact/-/preact-8.1.0.tgz"
   integrity sha1-8DW4CO67dORtViRrAsoPGQttZXQ=
 
-preact@^10.9.0:
-  version "10.9.0"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.9.0.tgz#69b282b26926b66481c9ae3450cf68610fee29ff"
-  integrity sha512-jO6/OvCRL+OT8gst/+Q2ir7dMybZAX8ioP02Zmzh3BkQMHLyqZSujvxbUriXvHi8qmhcHKC2Gwbog6Kt+YTh+Q==
+preact@^10.10.0:
+  version "10.10.0"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.10.0.tgz#7434750a24b59dae1957d95dc0aa47a4a8e9a180"
+  integrity sha512-fszkg1iJJjq68I4lI8ZsmBiaoQiQHbxf1lNq+72EmC/mZOsFF5zn3k1yv9QGoFgIXzgsdSKtYymLJsrJPoamjQ==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -3643,10 +3643,10 @@ react-modal@^3.14.3:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-notion-x@6.12.10:
-  version "6.12.10"
-  resolved "https://registry.yarnpkg.com/react-notion-x/-/react-notion-x-6.12.10.tgz#8bebde1560ade17f3143b9fbef0dccc8d5c46bf2"
-  integrity sha512-Hrnv37AYkNs0KuNQBOCWxhk6I02HoJwuyM2bihUwQd37F8ZZ/FSOv0q4sgSn2ATat+O5WgFpMGFT1MCK5msp1w==
+react-notion-x@6.12.11:
+  version "6.12.11"
+  resolved "https://registry.yarnpkg.com/react-notion-x/-/react-notion-x-6.12.11.tgz#36d0333a4463f847d48e5bd071b907d628d77791"
+  integrity sha512-ycz/Oi5Ksm7h9HjmZPqacjznN1yBufJE1smB2ufAPq50tyG7TbL9hdP3wB768s4/E6XexTuFJhbP2gcaF4YUNA==
   dependencies:
     "@fisch0920/medium-zoom" "^1.0.7"
     "@matejmazur/react-katex" "^3.1.3"
@@ -4262,10 +4262,10 @@ swr@^1.2.2, swr@^1.3.0:
   resolved "https://registry.yarnpkg.com/swr/-/swr-1.3.0.tgz#c6531866a35b4db37b38b72c45a63171faf9f4e8"
   integrity sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==
 
-tailwindcss@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.5.tgz#c8e0bb1cbacf29a6411d9c07debc1af9d388d4ca"
-  integrity sha512-bC/2dy3dGPqxMWAqFSRgQxVCfmO/31ZbeEp8s9DMDh4zgPZ5WW1gxRJkbBkXcTUIzaSUdhWrcsrSOe32ccgB4w==
+tailwindcss@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.6.tgz#bcb719357776c39e6376a8d84e9834b2b19a49f1"
+  integrity sha512-7skAOY56erZAFQssT1xkpk+kWt2NrO45kORlxFPXUt3CiGsVPhH1smuH5XoDH6sGPXLyBv+zgCKA2HWBsgCytg==
   dependencies:
     arg "^5.0.2"
     chokidar "^3.5.3"
@@ -4283,7 +4283,7 @@ tailwindcss@^3.1.5:
     postcss "^8.4.14"
     postcss-import "^14.1.0"
     postcss-js "^4.0.0"
-    postcss-load-config "^4.0.1"
+    postcss-load-config "^3.1.4"
     postcss-nested "5.0.6"
     postcss-selector-parser "^6.0.10"
     postcss-value-parser "^4.2.0"
@@ -4670,6 +4670,11 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yaml@^1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
+  integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
 yaml@^2.1.1:
   version "2.1.1"
