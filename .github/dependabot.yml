@@ -11,5 +11,13 @@ updates:
       interval: "daily"
       time: "00:00"
       timezone: "Asia/Bangkok"
+    target-branch: "develop"
     # Disable version updates for npm dependencies
+    ignore:
+      - dependency-name: "next"
+      - dependency-name: "@next/bundle-analyzer"
+      - dependency-name: "eslint-config-next"
+    labels:
+      - "npm"
+      - "dependencies"
     open-pull-requests-limit: 20
