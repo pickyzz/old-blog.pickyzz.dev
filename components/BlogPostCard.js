@@ -41,7 +41,7 @@ const BlogPostCard = ({ post }) => {
 
       {post?.page_cover && (
         <Link href={`${BLOG.path}/article/${post.slug}`} passHref>
-        <div className='animate__animated animate__zoomIn h-60 w-full xl:max-w-xs relative xl:h-full duration-200 cursor-pointer transform overflow-hidden'>
+        <div className='h-60 w-full xl:max-w-xs relative xl:h-full duration-200 cursor-pointer transform overflow-hidden'>
           <Image className='hover:scale-105 transform duration-700' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' />
         </div>
       </Link>
