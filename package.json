@@ -22,7 +22,7 @@
     "lint:write": "next lint --cache --fix"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.0",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.0.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
