@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import BaseLayout from '@/layouts/BaseLayout'
 import BLOG from '@/blog.config'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
