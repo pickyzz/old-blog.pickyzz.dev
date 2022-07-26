@@ -10,7 +10,7 @@ function darkmode(theme) {
 export default function WalineComment() {
     const ref = useRef()
     const cpr = false
-    const meta = ['nick', 'mail', 'link']
+    const meta = ['nick', 'mail']
     const requireData = ['nick', 'mail']
     const dum = darkmode()
     const image = false
