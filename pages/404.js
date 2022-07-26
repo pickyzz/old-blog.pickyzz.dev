@@ -1,23 +1,23 @@
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import BaseLayout from '@/layouts/BaseLayout'
 import BLOG from '@/blog.config'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export default function Custom404() {
-  const router = useRouter()
-  useEffect(() => {
-    // Delay 3 seconds, return to the homepage if loading fails
-    setTimeout(() => {
-      if (window) {
-        const article = document.getElementById('article-wrapper')
-        if (!article) {
-          router.push('/')
-        }
-      }
-    }, 3000)
-  })
+  // const router = useRouter()
+  // useEffect(() => {
+  //   // Delay 3 seconds, return to the homepage if loading fails
+  //   setTimeout(() => {
+  //     if (window) {
+  //       const article = document.getElementById('article-wrapper')
+  //       if (!article) {
+  //         router.push('/')
+  //       }
+  //     }
+  //   }, 3000)
+  // })
 
   return (
     <BaseLayout meta={{ title: `${BLOG.title} | Not found` }}>
@@ -29,7 +29,7 @@ export default function Custom404() {
           </h2>
           <div className="inline-block text-left h-32 leading-10 items-center">
             <h2 className="m-0 p-0">
-              The page could not be loaded and will return to the homepage
+              The page could not be found.
             </h2>
           </div>
         </div>

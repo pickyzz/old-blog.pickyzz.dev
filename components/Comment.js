@@ -28,6 +28,12 @@ const CusdisComponent = dynamic(
   },
   { ssr: false }
 )
+const WalineComponent = dynamic(
+  () => {
+    return import('@/components/Waline')
+  },
+  { ssr: false }
+)
 
 const Comment = ({ frontMatter }) => {
   const router = useRouter()
@@ -70,6 +76,12 @@ const Comment = ({ frontMatter }) => {
           }}
           lang={BLOG.lang.toLowerCase()}
         />
+      </div>
+    </>)}
+    {BLOG.comment.provider === 'waline' && (<>
+      <div className='m-10'>
+        <WalineComponent 
+        lang='eng-Us'/>
       </div>
     </>)}
   </div>
