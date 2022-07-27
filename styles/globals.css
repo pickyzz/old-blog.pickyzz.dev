@@ -6,6 +6,10 @@
   visibility: hidden;
 }
 
+.wl-actions{
+  visibility: hidden;
+}
+
 html {
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
