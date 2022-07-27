@@ -16,7 +16,7 @@ export default function WalineComment() {
     const image = false
 
     return <Waline ref={ref}
-        serverURL="https://blog-comment-app.vercel.app"
+        serverURL="https://comment.pickyzz.dev"
         lang="en-us"
         meta={meta}
         dark={dum}
