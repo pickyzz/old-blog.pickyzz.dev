@@ -1,10 +1,6 @@
 import CookieConsent from 'react-cookie-consent'
 import cookie from 'react-cookies'
 
-const allCookies = cookie.loadAll()
-
-console.log(allCookies)
-
 export default function CookieAcception() {
   return (
     <CookieConsent
