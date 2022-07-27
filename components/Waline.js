@@ -14,6 +14,7 @@ export default function WalineComment() {
     const requireData = ['nick', 'mail']
     const dum = darkmode()
     const image = false
+    const ua = false
 
     return <Waline ref={ref}
         serverURL="https://comment.pickyzz.dev"
@@ -22,5 +23,6 @@ export default function WalineComment() {
         dark={dum}
         imageUploader = {image}
         requiredMeta = {requireData}
+        ua={ua}
         copyright={cpr} />
 }

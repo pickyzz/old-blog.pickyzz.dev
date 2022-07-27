@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.wl-card .wl-meta>span{
-  visibility: hidden;
+.wl-card .wl-meta>span:nth-child(1) {
+  display: none;
 }
 
-.wl-actions{
-  visibility: hidden;
+.wl-card .wl-meta>span:nth-child(2) {
+  margin-top: 2px;
+  margin-bottom: 4%;
+}
+
+.wl-card .wl-content>p {
+  font-size: 1em;
+}
+
+.wl-actions [title~="GIF"]{
+  display: none;
 }
 
 html {

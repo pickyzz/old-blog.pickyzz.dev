@@ -79,7 +79,7 @@ const Comment = ({ frontMatter }) => {
       </div>
     </>)}
     {BLOG.comment.provider === 'waline' && (<>
-      <div className='m-10'>
+      <div className='m-10 w-auto'>
         <WalineComponent />
       </div>
     </>)}
