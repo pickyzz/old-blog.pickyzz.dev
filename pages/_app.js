@@ -7,7 +7,10 @@ import 'react-notion-x/src/styles.css'
 import '@/styles/notion.css' // custom style override
 
 // used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-tomorrow.css'
+import 'prismjs/themes/prism-tomorrow.min.css'
+
+// waline
+import '@waline/client/dist/waline.css'
 
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css'
