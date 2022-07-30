@@ -17,7 +17,7 @@ export default function CookieAcception() {
         cookie.remove('cookieConsent')
       }}
     >
-      เว็บไซต์นี้มีการใช้ Cookies
+      เว็บไซต์นี้มีการใช้ cookies
       ในการเก็บการตั้งค่าธีมและเพิ่มประสิทธิภาพในการใช้งานเว็บไซต์
       ทั้งนี้ขึ้นอยู่กับความยินยอมของผู้ใช้งานตามหลัก PDPA{' '}
       <span style={{ fontSize: '10px' }}>
