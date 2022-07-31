@@ -77,7 +77,7 @@
     "next-sitemap": "^3.1.15",
     "postcss": "^8.4.14",
     "prettier": "2.7.1",
-    "tailwindcss": "^3.1.6"
+    "tailwindcss": "^3.1.7"
   },
   "resolutions": {
     "axios": ">=0.21.1"
