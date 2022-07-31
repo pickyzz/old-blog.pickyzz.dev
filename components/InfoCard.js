@@ -23,7 +23,7 @@ const InfoCard = ({ postCount }) => {
             </div>
           </div>
         </div>
-        <div className="mt-6 text-2xl font-mono dark:text-white py-2 -mb-4">
+        <div className="mt-6 text-2xl ml-3 font-mono dark:text-white py-2 -mb-4">
           {BLOG.author}
         </div>
         <div className="font-light dark:text-white py-2 mb-2">{BLOG.bio}</div>

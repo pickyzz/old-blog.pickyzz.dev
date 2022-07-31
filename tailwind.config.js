@@ -7,8 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Maitree: ['Maitree'],
-        IBM:['IBM Plex Sans Thai Looped'],
-        Firacode:['Fira Code', 'monospace']
+        IBM:['IBM Plex Sans Thai Looped']
       },
       colors: {
         day: {
@@ -23,5 +22,14 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    styled: true,
+    base: true,
+    utils: true,
+    logs: false,
+    rtl: false,
+    prefix: ""
+  },
 }
