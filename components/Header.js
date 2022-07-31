@@ -106,7 +106,7 @@ export default function Header() {
       }}
     >
       <div className="absolute flex h-80 items-center lg:-mt-6 justify-center w-full text-2xl md:text-5xl text-white">
-        <div id="typed" className="flex text-center font-Firacode" />
+        <div id="typed" className="flex text-center" />
       </div>
 
       {/* scroll button */}

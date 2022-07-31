@@ -1,6 +1,6 @@
 import BLOG from '@/blog.config'
 import CommonHead from '@/components/CommonHead'
-import CookieAcception from '@/components/cookieConsent'
+import CookieAcception from '@/components/CookieAcception'
 import FloatDarkModeButton from '@/components/FloatDarkModeButton'
 import Footer from '@/components/Footer'
 // import JumpToBottomButton from '@/components/JumpToBottomButton'
