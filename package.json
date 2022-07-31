@@ -41,7 +41,7 @@
     "medium-zoom": "^1.0.6",
     "memory-cache": "^0.2.0",
     "next": "12.1.6",
-    "notion-client": "6.12.11",
+    "notion-client": "6.12.12",
     "notion-utils": "6.12.9",
     "preact": "^10.10.0",
     "qrcode.react": "^3.1.0",
