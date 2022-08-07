@@ -79,9 +79,6 @@
     "prettier": "2.7.1",
     "tailwindcss": "3.1.8"
   },
-  "resolutions": {
-    "axios": "0.27.2"
-  },
   "bugs": {
     "url": "https://github.com/pickyzz/pickyzz.dev/issues",
     "email": "pikcolokung@gmail.com"
