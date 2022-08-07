@@ -3,6 +3,16 @@
   "extends": [
     "config:base"
   ],
-  "ignoreDeps": ["next", "@next/bundle-analyzer", "eslint-config-next"],
-  "baseBranches": ["develop"]
+  "baseBranches": ["develop"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "ignoreDeps": ["next", "@next/bundle-analyzer", "eslint-config-next", "react", "react-dom"],
+  "schedule": [
+    "before 1am"
+  ],
+  "timezone": "Asia/Bangkok"
 }
