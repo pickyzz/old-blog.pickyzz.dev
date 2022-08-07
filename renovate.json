@@ -13,7 +13,7 @@
       "automerge": true
     }
   ],
-  "ignoreDeps": ["next", "@next/bundle-analyzer", "eslint-config-next"],
+  "ignoreDeps": ["next", "@next/bundle-analyzer", "eslint-config-next", "react"],
   "schedule": [
     "before 1am"
   ],
