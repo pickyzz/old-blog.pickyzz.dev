@@ -3756,15 +3756,15 @@ preact-transition-group@^1.1.0:
   resolved "https://registry.yarnpkg.com/preact-transition-group/-/preact-transition-group-1.1.1.tgz#f0a49327ea515ece34ea2be864c4a7d29e5d6e10"
   integrity sha512-v89XLodCvylf5lMrhI+LqIhDsAjWfiDKV4keAU+L5yDtxmqn8uvjZXn+haKMEG0x0PZz81own19SuNJD5NlOFQ==
 
+preact@10.10.1:
+  version "10.10.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.10.1.tgz#df67e4348f50fc6ad2e11e813553f15c6543176b"
+  integrity sha512-cXljG59ylGtSLismoLojXPAGvnh2ipQr3BYz9KZQr+1sdASCT+sR/v8dSMDS96xGCdtln2wHfAHCnLJK+XcBNg==
+
 preact@8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/preact/-/preact-8.1.0.tgz#f035b808eebb74e46d56246b02ca0f190b6d6574"
   integrity sha512-JrRktQ5XOM5TXAc47FED+KKamm9yopsrLSj0x6e8++gZanXag4G84Zyz713LoywGDfXCi9acT5y/Hs3NhP+SdQ==
-
-preact@^10.10.0:
-  version "10.10.0"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.10.0.tgz#7434750a24b59dae1957d95dc0aa47a4a8e9a180"
-  integrity sha512-fszkg1iJJjq68I4lI8ZsmBiaoQiQHbxf1lNq+72EmC/mZOsFF5zn3k1yv9QGoFgIXzgsdSKtYymLJsrJPoamjQ==
 
 prebuild-install@^7.1.1:
   version "7.1.1"
