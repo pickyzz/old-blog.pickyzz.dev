@@ -4,15 +4,18 @@
     "config:base"
   ],
   "baseBranches": ["develop"],
-  "packageRules": [
-    {
-      "updateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true
-    }
-  ],
+  "minor": {
+    "automerge": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "pin": {
+    "automerge": true
+  },
+  "lockFileMaintenance": {
+    "automerge": true
+  },
   "ignoreDeps": ["next", "@next/bundle-analyzer", "eslint-config-next", "react", "react-dom"],
   "schedule": [
     "before 1am"
