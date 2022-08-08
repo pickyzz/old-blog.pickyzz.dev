@@ -39,7 +39,7 @@ const SearchInput = ({ currentTag, currentSearch }) => {
   }
 
   return (
-    <div className="flex border dark:border-gray-600 w-full bg-gray-100 dark:bg-gray-900">
+    <div className="rounded-md flex border dark:border-gray-600 w-full bg-gray-100 dark:bg-gray-900">
       <input
         ref={searchInputRef}
         type="text"
@@ -49,7 +49,7 @@ const SearchInput = ({ currentTag, currentSearch }) => {
             : `${locale.SEARCH.ARTICLES}`
         }
         className={
-          'w-full text-sm pl-2 transition focus:shadow-lg font-light leading-10 border-gray-300 text-black bg-gray-100 dark:bg-gray-900 dark:text-white'
+          'rounded-md w-full text-sm pl-2 transition focus:shadow-lg font-light leading-10 border-gray-300 text-black bg-gray-100 dark:bg-gray-900 dark:text-white'
         }
         onKeyUp={handleKeyUp}
         onChange={e => updateSearchKey(e.target.value)}
@@ -58,13 +58,13 @@ const SearchInput = ({ currentTag, currentSearch }) => {
       {searchKey && searchKey.length && (
         <FontAwesomeIcon
           icon={faTimes}
-          className="text-gray-300 float-right m-3 cursor-pointer"
+          className="text-gray-300 float-right m-3 cursor-pointer rounded-md"
           onClick={cleanSearch}
         />
       )}
 
       <div
-        className="p-3 bg-gray-50 flex border-l dark:border-gray-700 dark:hover:bg-gray-800 dark:bg-gray-600 justify-center items-center cursor-pointer"
+        className="rounded-md p-3 bg-gray-50 flex border-l dark:border-gray-700 dark:hover:bg-gray-800 dark:bg-gray-600 justify-center items-center cursor-pointer"
         onClick={() => {
           handleSearch(searchKey)
         }}

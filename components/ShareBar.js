@@ -13,6 +13,8 @@ import {
   faWeixin
 } from '@fortawesome/free-brands-svg-icons'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { toast, Slide, ToastContainer } from 'react-toastify'
+import { loadUserThemeFromCookies } from '@/lib/theme'
 
 const ShareBar = ({ post }) => {
   const router = useRouter()
@@ -36,7 +38,17 @@ const ShareBar = ({ post }) => {
 
   const copyUrl = () => {
     copy(shareUrl)
-    alert(locale.COMMON.URL_COPIED)
+    toast.success(locale.COMMON.URL_COPIED, {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: loadUserThemeFromCookies(),
+      transition: Slide,
+      })
   }
 
   return (
@@ -118,6 +130,7 @@ const ShareBar = ({ post }) => {
               className="transition ease-in-out duration-150 hover:-translate-y-1 hover:scale-105"
             />
           </a>
+          <ToastContainer />
         </div>
       </div>
     </>

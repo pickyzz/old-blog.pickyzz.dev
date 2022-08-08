@@ -1,6 +1,7 @@
 import BLOG from 'blog.config'
 import 'animate.css'
 import '@/styles/globals.css'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
