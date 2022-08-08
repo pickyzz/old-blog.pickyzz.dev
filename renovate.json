@@ -10,6 +10,7 @@
       "automerge": true
     }
   ],
+  "platformAutomerge": true,
   "ignoreDeps": ["next", "@next/bundle-analyzer", "eslint-config-next", "react", "react-dom"],
   "schedule": [
     "before 1am"
