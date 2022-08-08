@@ -52,6 +52,7 @@
     "react-dom": "17.0.2",
     "react-notion-x": "6.12.11",
     "react-static-tweets": "0.8.0",
+    "react-toastify": "^9.0.8",
     "sharp": "0.30.7",
     "smoothscroll-polyfill": "0.4.4",
     "static-tweets": "0.8.0",
@@ -78,9 +79,6 @@
     "postcss": "8.4.16",
     "prettier": "2.7.1",
     "tailwindcss": "3.1.8"
-  },
-  "resolutions": {
-    "axios": "0.27.2"
   },
   "bugs": {
     "url": "https://github.com/pickyzz/pickyzz.dev/issues",
