@@ -33,7 +33,7 @@
     "axios": "0.27.2",
     "copy-to-clipboard": "3.3.2",
     "daisyui": "2.22.0",
-    "date-fns": "2.29.1",
+    "date-fns": "2.29.2",
     "feed": "4.2.2",
     "gitalk": "1.7.2",
     "localStorage": "1.0.4",
