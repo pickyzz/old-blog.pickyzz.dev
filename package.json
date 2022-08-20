@@ -62,7 +62,7 @@
     "webpack-bundle-analyzer": "4.5.0"
   },
   "devDependencies": {
-    "@waline/client": "2.6.2",
+    "@waline/client": "2.6.3",
     "autoprefixer": "10.4.8",
     "eslint": "8.21.0",
     "eslint-config-next": "^11.0.0",
