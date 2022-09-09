@@ -26,7 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "6.2.0",
     "@fortawesome/free-solid-svg-icons": "6.2.0",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "@icons-pack/react-simple-icons": "5.4.0",
+    "@icons-pack/react-simple-icons": "5.5.0",
     "@next/bundle-analyzer": "^12.1.1",
     "@popperjs/core": "2.11.6",
     "animate.css": "4.1.1",
